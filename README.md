@@ -17,31 +17,40 @@
 </p>
 
 <p align="center">
-    <a
-      href="https://github.com/josephgattuso/josephgattuso.github.io/blob/master/LICENSE"
-    >
-      <img
-        alt="GitHub"
-        src="https://img.shields.io/github/license/josephgattuso/josephgattuso.github.io"
-      />
-    </a>
+  <a
+    href="https://github.com/josephgattuso/josephgattuso.github.io/blob/master/LICENSE"
+  >
     <img
-      src="https://img.shields.io/badge/PRs-welcome-blue.svg?style=flat-square"
+      alt="MIT License"
+      src="https://img.shields.io/github/license/josephgattuso/josephgattuso.github.io"
     />
+  </a>
+    <a
+    href="https://github.com/josephgattuso/josephgattuso.github.io/pulls"
+  >
+  <img
+    alt="Pull requests welcome"
+    src="https://img.shields.io/badge/PRs-welcome-blue.svg?style=flat-square"
+  />
+  </a>
+  <a
+    href="https://github.com/josephgattuso/josephgattuso.github.io/commits/master"
+  >
     <img
       alt="GitHub last commit"
       src="https://img.shields.io/github/last-commit/josephgattuso/josephgattuso.github.io?style=flat-square"
     />
-    <a
-      target="_blank"
-      href="https://twitter.com/intent/follow?screen_name=joeetuso"
-    >
-      <img
-        alt="Twitter Follow"
-        src="https://img.shields.io/twitter/follow/joeetuso?style=flat-square"
-      />
-    </a>
-  </p>
+  </a>
+  <a
+    target="_blank"
+    href="https://twitter.com/intent/follow?screen_name=joeetuso"
+  >
+    <img
+      alt="Twitter Follow"
+      src="https://img.shields.io/twitter/follow/joeetuso?style=flat-square"
+    />
+  </a>
+</p>
 
 <!-- ## 🚀 Quick start -->
 
@@ -50,10 +59,10 @@
 - [x] All code is written by you
 - [x] No external libraries (e.g. no Bootstrap, React or GitHub Pages themes)
 - [x] Hosted on GitHub Pages
+- [x] Links to your public freeCodeCamp profile
+- [x] Links to your Codewars profile
+- [x] Links back to the GitHub repository that contains the code for your site
 - [ ] Tells us about why you are applying for the programme
-- [ ] Links back to the GitHub repository that contains the code for your site
-- [ ] Links to your public freeCodeCamp profile
-- [ ] Links to your Codewars profile
 
 ## 📐 Technical criteria
 
