@@ -14,6 +14,7 @@
     <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Joseph Gattuso</title>
   </head>
@@ -26,17 +27,9 @@
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
-    <nav id="mobileNav" class="menu-btn">☰</nav>
-    <nav id="navbar" class="menu">
-      <ul>
-        <li><div id="closeNav" class="close-nav">&times;</div></li>
-        <li>
-          <a href="#top"><img src="images/logo.png" width="36" alt="" /></a>
-        </li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </a>
     </nav>
     <section id="intro" class="cover">
       <h1 class="title">Joseph Gattuso</h1>
