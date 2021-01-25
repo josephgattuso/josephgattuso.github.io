@@ -161,7 +161,13 @@ label {
 }
 
 .cover h1 {
+  color: #222;
   font-size: 48px;
+}
+
+.cover .subtitle {
+  color: #444;
+  font-weight: normal;
 }
 
 /* Carousel */
