@@ -53,6 +53,7 @@ label {
   background: #eaeaea;
   padding: 20px;
   max-width: 800px;
+  margin-bottom: 100px;
 }
 
 .col-25 {
@@ -207,6 +208,13 @@ label {
   outline: none;
 }
 
+/* Footer */
+
+footer {
+  text-align: center;
+  padding: 2rem;
+}
+
 /* Mobile tab navigation */
 
 .mobile-nav {
@@ -248,7 +256,22 @@ nav ul li a.active {
   color: #8e44ad;
 }
 
+.social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.social li {
+  padding: 20px;
+}
+
 @media only screen and (max-width: 600px) {
+  footer {
+    display: none;
+  }
   .mobile-nav {
     display: block;
     z-index: 2;
