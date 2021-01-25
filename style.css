@@ -1,11 +1,12 @@
-@import url("@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600;1,700&display=swap');");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   margin: 0 auto;
 }
 
@@ -41,6 +42,10 @@ input[type="submit"] {
 label {
   display: inline-block;
   padding: 12px 12px 12px 0;
+}
+
+.center {
+  text-align: center;
 }
 
 .contact-form {
@@ -200,4 +205,55 @@ label {
 
 .btn:focus {
   outline: none;
+}
+
+/* Mobile tab navigation */
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-top: -5px;
+  width: 100%;
+}
+
+.mobile-nav ul {
+  background: #fff;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 60px;
+}
+
+.mobile-nav li,
+.mobile-nav a {
+  color: #777;
+  cursor: pointer;
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+.mobile-nav ul li p {
+  font-size: 12px;
+  margin: 2px 0;
+}
+
+nav ul li:hover,
+nav ul li.active,
+nav ul li a:hover,
+nav ul li a.active {
+  color: #8e44ad;
+}
+
+@media only screen and (max-width: 600px) {
+  .mobile-nav {
+    display: block;
+    z-index: 2;
+  }
+  .topnav {
+    display: none;
+  }
 }
