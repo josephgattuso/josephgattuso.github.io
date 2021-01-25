@@ -14,6 +14,71 @@ a {
   text-decoration: none;
 }
 
+/* Contact Form */
+
+input[type="text"],
+input[type="email"],
+textarea {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 12px;
+  resize: vertical;
+  width: 100%;
+}
+
+input[type="submit"] {
+  background: lightgray;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  font-size: 1rem;
+  /* 0.5rem * 16px = 8px */
+  padding: 0.5rem 1rem;
+}
+
+label {
+  display: inline-block;
+  padding: 12px 12px 12px 0;
+}
+
+.contact-form {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  max-width: 800px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .col-25,
+  .col-75,
+  input[type="submit"] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+/* Navbar */
+
 .topnav a:hover {
   text-decoration: underline;
 }
@@ -65,11 +130,7 @@ a {
   }
 }
 
-.slide {
-  height: 500px;
-  object-fit: cover;
-  width: 100%;
-}
+/* Carousel */
 
 .carousel {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
@@ -82,6 +143,12 @@ a {
   display: flex;
   transform: translateX(0);
   transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  height: 500px;
+  object-fit: cover;
+  width: 100%;
 }
 
 .buttons-container {

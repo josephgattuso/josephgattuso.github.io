@@ -85,12 +85,56 @@
     </section>
     <section id="contact">
       <h2>Contact</h2>
-      <aside>TODO: Contact Form</aside>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quasi quae
-        maiores debitis, optio, beatae sit cumque et nobis eos ipsa qui nesciunt
-        ipsum voluptatibus aliquid eligendi mollitia fugit tempora?
+        It would be great to hear from you! Feel free to fill out the form
+        below.
       </p>
+      <aside class="contact-form">
+        <form action="https://formspree.io/f/xnqowlga" method="POST">
+          <div class="row">
+            <div class="col-25">
+              <label for="name">Name</label>
+            </div>
+            <div class="col-75">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name..."
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="lastName">Email</label>
+            </div>
+            <div class="col-75">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your email..."
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="subject">Subject</label>
+            </div>
+            <div class="col-75">
+              <textarea
+                id="subject"
+                name="subject"
+                placeholder="Write something..."
+                style="height: 200px"
+              ></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <input type="submit" value="Submit" />
+          </div>
+        </form>
+      </aside>
     </section>
     <footer>
       <div id="links">
