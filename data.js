@@ -2,8 +2,7 @@ const projects = [
   {
     title: "Project 01",
     name: "CRWN Clothing",
-    img:
-      "https://images.unsplash.com/photo-1599394022918-6c2776530abb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+    img: "images/projects/01-crown-clothing.png",
     description:
       "Full-stack React e-commerce application. Built with React/Redux and Stripe integration (for demo only)",
     url: "https://gattuso-crwn-live.herokuapp.com",
@@ -12,8 +11,7 @@ const projects = [
   {
     title: "Project 02",
     name: "Monsters Rolodex",
-    img:
-      "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+    img: "images/projects/02-monsters-rolodex.png",
     description: "Building a contact directory app using React.",
     url: "https://josephgattuso.github.io/monsters-rolodex",
     repo: "https://github.com/josephgattuso/monsters-rolodex",
@@ -21,8 +19,7 @@ const projects = [
   {
     title: "Project 03",
     name: "Calculator",
-    img:
-      "https://images.unsplash.com/photo-1599423300746-b62533397364?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+    img: "images/projects/03-calculator.png",
     description: "Creating a simple calculator with plain JavaScript.",
     url: "https://josephgattuso.github.io/js-projects/calculator",
     repo: "https://github.com/josephgattuso/js-projects/tree/master/calculator",
@@ -30,8 +27,7 @@ const projects = [
   {
     title: "Project 04",
     name: "Quotes Generator",
-    img:
-      "https://images.unsplash.com/photo-1599561046251-bfb9465b4c44?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+    img: "images/projects/04-quotes-generator.png",
     description:
       "Using an API to build a random quote generator with Twitter integration.",
     url: "https://josephgattuso.github.io/js-projects/quotes-generator",
@@ -41,8 +37,7 @@ const projects = [
   {
     title: "Project 05",
     name: "Pokedex",
-    img:
-      "https://images.unsplash.com/photo-1599394022918-6c2776530abb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+    img: "images/projects/05-pokedex.png",
     description:
       "Find info on Pokemon with this Pokedex app. Uses the Pokeapi.co API.",
     url: "https://josephgattuso.github.io/js-projects/pokedex",
@@ -51,8 +46,7 @@ const projects = [
   {
     title: "Project 06",
     name: "Hoverboard",
-    img:
-      "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+    img: "images/projects/06-hoverboard.png",
     description: "Hoverboard app with color-change effect on mouse hover",
     url: "https://josephgattuso.github.io/js-projects/hoverboard",
     repo: "https://github.com/josephgattuso/js-projects/tree/master/hoverboard",
@@ -60,8 +54,7 @@ const projects = [
   {
     title: "Project 07",
     name: "Image Carousel",
-    img:
-      "https://images.unsplash.com/photo-1599423300746-b62533397364?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+    img: "images/projects/07-image-carousel.png",
     description: "Web component with classic image carousel",
     url: "https://josephgattuso.github.io/js-projects/image-carousel",
     repo:
@@ -70,8 +63,7 @@ const projects = [
   {
     title: "Project 08",
     name: "Animated Countdown",
-    img:
-      "https://images.unsplash.com/photo-1599561046251-bfb9465b4c44?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+    img: "images/projects/08-animated-countdown.png",
     description: "Web compononet loader with feature animated countdown",
     url: "https://josephgattuso.github.io/js-projects/animated-countdown",
     repo:
@@ -80,8 +72,7 @@ const projects = [
   {
     title: "Project 09",
     name: "Notes App",
-    img:
-      "https://images.unsplash.com/photo-1599394022918-6c2776530abb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+    img: "images/projects/09-notes-app.png",
     description: "Create, Read, Edit, and Delete notes",
     url: "https://josephgattuso.github.io/js-projects/notes-app",
     repo: "https://github.com/josephgattuso/js-projects/tree/master/notes-app",
@@ -327,8 +318,7 @@ const projects = [
   },
   {
     name: "Blurry Loading",
-    img:
-      "https://images.unsplash.com/photo-1599394022918-6c2776530abb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+    img: "images/projects/34-blurry-loading.png",
     description: "Web component with feature blurry page loading effect",
     url: "https://josephgattuso.github.io/js-projects/blurry-loading",
     repo:
@@ -336,8 +326,7 @@ const projects = [
   },
   {
     name: "Search Widget",
-    img:
-      "https://images.unsplash.com/photo-1599394022918-6c2776530abb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+    img: "images/projects/35-hidden-search-widget.png",
     description: "Web component with feature hidden search widget",
     url: "https://josephgattuso.github.io/js-projects/hidden-search",
     repo:
@@ -345,8 +334,7 @@ const projects = [
   },
   {
     name: "Rotating Navigation",
-    img:
-      "https://images.unsplash.com/photo-1599394022918-6c2776530abb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+    img: "images/projects/36-rotating-navigation-animation.png",
     description: "Web component with feature rotating navigation animation",
     url: "https://josephgattuso.github.io/js-projects/rotating-navigation",
     repo:
@@ -354,8 +342,7 @@ const projects = [
   },
   {
     name: "Progress Steps",
-    img:
-      "https://images.unsplash.com/photo-1599394022918-6c2776530abb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+    img: "images/projects/37-progress-steps.png",
     description: "Web component timeline with feature progress steps",
     url: "https://josephgattuso.github.io/js-projects/progress-steps",
     repo:
@@ -363,8 +350,7 @@ const projects = [
   },
   {
     name: "Expanding Cards",
-    img:
-      "https://images.unsplash.com/photo-1599394022918-6c2776530abb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+    img: "images/projects/38-expanding-cards.png",
     description: "Web component with feature expanding cards",
     url: "https://josephgattuso.github.io/js-projects/expanding-cards",
     repo:
