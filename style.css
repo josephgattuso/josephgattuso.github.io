@@ -8,6 +8,7 @@ body {
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 a {
@@ -25,15 +26,28 @@ a:hover {
   margin: 0 auto;
   max-width: 1170px;
 }
+
 @media screen and (min-width: 992px) {
   .section-center {
     width: 95vw;
   }
 }
+
 main {
   min-height: 100vh;
   display: grid;
   place-items: center;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+  figure img {
+    width: 100vw;
+  }
 }
 
 /* Contact Form */
@@ -173,10 +187,10 @@ label {
     #999999 44%,
     #eaeaea 100%
   ); /* Chrome, Safari */
-  height: 100vh;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 100vh;
   justify-content: center;
   text-align: center;
 }
@@ -230,13 +244,6 @@ footer {
 .mobile-nav ul li p {
   font-size: 12px;
   margin: 2px 0;
-}
-
-nav ul li:hover,
-nav ul li.active,
-nav ul li a:hover,
-nav ul li a.active {
-  color: #8e44ad;
 }
 
 .social {
@@ -294,45 +301,30 @@ nav ul li a.active {
 
 /* Carousel */
 
-.img {
-  width: 500px;
-  height: 350px;
-  object-fit: cover;
-  border: 1px solid #ccc;
-  background: #fff;
-  padding: 0.25rem;
-}
-
-h4 {
-  text-transform: uppercase;
-  font-weight: 500;
-  margin: 0.5rem 0;
-}
-.title {
-  margin-bottom: 1.25rem;
-  letter-spacing: 2px;
-  text-transform: capitalize;
-}
-.description {
-  color: #222;
-  max-width: 35em;
-  margin: 0 auto;
-  letter-spacing: 1px;
-}
-.icon:hover {
-  transform: scale(1.1);
-  opacity: 0.8;
+.feature-project {
+  background: #eaeaea;
+  padding: 20px;
+  max-width: 720px;
 }
 
 .slider {
-  width: 85vw;
-  max-width: 620px;
-  margin: 0 auto;
-  margin-top: 5rem;
-  text-align: center;
-  padding: 1rem 0;
-  /* set relative for buttons */
+  background: #eaeaea;
+  height: 620px;
+  overflow: hidden;
   position: relative;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .feature-project {
+    padding: 20px 0;
+  }
+  .slider {
+    height: 520px;
+  }
+  .slide .img {
+    width: 100vw;
+  }
 }
 
 .slider a {
@@ -341,29 +333,31 @@ h4 {
   margin-right: 10px;
 }
 
-.slide-container {
-  display: flex;
-  position: relative;
-  height: 520px;
-  overflow: hidden;
+.slider a:hover {
+  color: #0070f3;
 }
 
 .slide {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 100%;
+  opacity: 0;
   position: absolute;
   top: 0;
+  bottom: 0;
   left: 0;
+  right: 0;
+  transition: opacity 1s;
+  z-index: 1;
+}
+
+.img {
+  background: #fff;
   width: 100%;
-  height: 100%;
-  transition: all 0.3s ease-in-out;
-  opacity: 0;
 }
-.slide.active {
+
+.slide.visible {
   opacity: 1;
-  transform: translateX(0);
-}
-.slide.next {
-  transform: translateX(100%);
-}
-.slide.last {
-  transform: translateX(-100%);
+  z-index: 2;
 }
