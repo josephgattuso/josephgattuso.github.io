@@ -15,7 +15,6 @@ function toggleMenu() {
 
 const sliderData = [
   {
-    title: "Project 01",
     name: "CRWN Clothing",
     img:
       "https://github.com/josephgattuso/crwn-clothing/raw/master/src/assets/cover.png",
@@ -25,7 +24,15 @@ const sliderData = [
     repo: "https://github.com/josephgattuso/crwn-clothing",
   },
   {
-    title: "Project 02",
+    name: "Custom Countdown",
+    img:
+      "https://github.com/josephgattuso/js-projects/raw/master/custom-countdown/cover.png",
+    description: "Saving a custom countdown in your browser.",
+    url: "https://josephgattuso.github.io/js-projects/custom-countdown",
+    repo:
+      "https://github.com/josephgattuso/js-projects/tree/master/custom-countdown",
+  },
+  {
     name: "Monsters Rolodex",
     img:
       "https://github.com/josephgattuso/monsters-rolodex/raw/master/src/images/cover.png",
@@ -34,7 +41,6 @@ const sliderData = [
     repo: "https://github.com/josephgattuso/monsters-rolodex",
   },
   {
-    title: "Project 03",
     name: "Calculator",
     img:
       "https://github.com/josephgattuso/js-projects/raw/master/calculator/cover.png",
@@ -43,7 +49,6 @@ const sliderData = [
     repo: "https://github.com/josephgattuso/js-projects/tree/master/calculator",
   },
   {
-    title: "Project 04",
     name: "Quotes Generator",
     img:
       "https://github.com/josephgattuso/js-projects/raw/master/quotes-generator/cover.png",
@@ -54,7 +59,6 @@ const sliderData = [
       "https://github.com/josephgattuso/js-projects/tree/master/quotes-generator",
   },
   {
-    title: "Project 05",
     name: "Pokedex",
     img:
       "https://github.com/josephgattuso/js-projects/raw/master/pokedex/cover.png",
@@ -64,7 +68,6 @@ const sliderData = [
     repo: "https://github.com/josephgattuso/js-projects/tree/master/pokedex",
   },
   {
-    title: "Project 06",
     name: "Hoverboard",
     img:
       "https://github.com/josephgattuso/js-projects/raw/master/hoverboard/cover.png",
@@ -73,7 +76,6 @@ const sliderData = [
     repo: "https://github.com/josephgattuso/js-projects/tree/master/hoverboard",
   },
   {
-    title: "Project 07",
     name: "Image Carousel",
     img:
       "https://github.com/josephgattuso/js-projects/raw/master/image-carousel/cover.png",
@@ -83,7 +85,6 @@ const sliderData = [
       "https://github.com/josephgattuso/js-projects/tree/master/image-carousel",
   },
   {
-    title: "Project 08",
     name: "Animated Countdown",
     img:
       "https://github.com/josephgattuso/js-projects/raw/master/animated-countdown/cover.png",
@@ -93,7 +94,6 @@ const sliderData = [
       "https://github.com/josephgattuso/js-projects/tree/master/animated-countdown",
   },
   {
-    title: "Project 09",
     name: "Notes App",
     img:
       "https://github.com/josephgattuso/js-projects/raw/master/notes-app/cover.png",
@@ -102,7 +102,6 @@ const sliderData = [
     repo: "https://github.com/josephgattuso/js-projects/tree/master/notes-app",
   },
   {
-    title: "Project 10",
     name: "Good Cheap Fast",
     img:
       "https://github.com/josephgattuso/js-projects/raw/master/good-cheap-fast/cover.png",
