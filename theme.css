@@ -72,6 +72,7 @@ body {
   --bkg-color: #fff;
   --hdr-color: #000;
   --link-color: #0070f3;
+  --secondary-color: #29bc9b;
   --text-color: #222;
 }
 
@@ -80,6 +81,7 @@ body.dark-theme {
   --bkg-color: #000;
   --hdr-color: #fff;
   --link-color: #809fff;
+  --secondary-color: #79ffe1;
   --text-color: #888;
 }
 
@@ -90,13 +92,20 @@ body.dark-theme {
     --bkg-color: #000;
     --hdr-color: #fff;
     --link-color: #809fff;
+    --secondary-color: #79ffe1;
     --text-color: #888;
+  }
+  figcaption,
+  .feature-project,
+  .slide {
+    background: var(--accent-color);
   }
   body.light-theme {
     --accent-color: #ccc;
     --bkg-color: #fff;
     --hdr-color: #000;
     --link-color: #0070f3;
+    --secondary-color: #29bc9b;
     --text-color: #222;
   }
 }
@@ -119,8 +128,4 @@ h6,
 nav a,
 .btn-toggle {
   color: var(--hdr-color);
-}
-
-.feature-project {
-  background: var(--accent-color);
 }

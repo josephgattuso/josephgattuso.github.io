@@ -70,18 +70,6 @@ figure {
 /* Cover section */
 
 .cover {
-  background: linear-gradient(
-    top,
-    #666666 0%,
-    #999999 44%,
-    #eaeaea 100%
-  ); /* W3C */
-  background: -webkit-linear-gradient(
-    top,
-    #666666 0%,
-    #999999 44%,
-    #eaeaea 100%
-  ); /* Chrome, Safari */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,7 +80,6 @@ figure {
 }
 
 .cover h1 {
-  color: #222;
   font-size: 48px;
 }
 
@@ -275,13 +262,7 @@ footer {
 }
 
 .slider a {
-  color: black;
-  text-decoration: underline;
-  margin-right: 10px;
-}
-
-.slider a:hover {
-  color: #0070f3;
+  margin-left: 10px;
 }
 
 .slide {
@@ -297,7 +278,7 @@ footer {
   left: 0;
   right: 0;
   transition: opacity 1s;
-  z-index: 1;
+  z-index: 10;
 }
 
 .img {
@@ -307,7 +288,7 @@ footer {
 
 .slide.visible {
   opacity: 1;
-  z-index: 2;
+  z-index: 10;
 }
 
 /* Media Queries */
@@ -330,7 +311,7 @@ footer {
   h2,
   h3,
   p {
-    padding: 0 20px;
+    padding: 0 20px 0;
   }
 }
 
@@ -339,10 +320,17 @@ footer {
     display: none;
   }
   .banner {
-    max-height: 280px;
+    height: 280px;
+  }
+  .main-nav a:not(:first-child) {
+    display: none;
   }
   .main-nav {
-    display: none;
+    margin-bottom: 100px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
   }
   .mobile-nav {
     display: block;
