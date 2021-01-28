@@ -16,6 +16,7 @@
     <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./theme.css">
     <title>Joseph Gattuso</title>
   </head>
   <body id="top">
@@ -56,6 +57,9 @@
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
+        <button class="btn-toggle">
+          <i class="fas fa-sun"></i>
+        </button>
       </nav>
 
       <section id="intro" class="cover">
@@ -66,6 +70,7 @@
     <main>
       <section id="about">
         <h2 class="center">About</h2>
+        <img src="images/tools-and-such.png" class="banner" alt="" />
         <p>
           Hi there! My name is Joseph and I'm an aspiring Web Developer based in
           London. My current focus is on building gorgeous web applications,
@@ -78,11 +83,6 @@
           tactile learner!)
         </p>
 
-        <figure class="center">
-          <img src="images/placeholder.svg" width="500" alt="" />
-          <figcaption>This is a placeholder image.</figcaption>
-        </figure>
-
         <p>
           It is true there are some great resources freely available to learn
           programming. But we need to meet new friends and colleagues who share
@@ -94,8 +94,13 @@
 
       <section id="projects">
         <h2 class="center">Projects</h2>
-
-        <div class="feature-project">
+        <img
+          src="images/timj-ots0EOYuGtU-unsplash.jpg"
+          class="banner"
+          style="object-fit: cover"
+          alt=""
+        />
+        <div class="feature-project section-center">
           <h3>50 JavaScript Apps</h3>
           <p>
             A fun challenge, to complete a collection of 50 projects within 50
@@ -229,6 +234,6 @@
         <a href="#top">&uarr; Back to Top</a>
       </span>
     </footer>
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>

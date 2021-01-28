@@ -1,0 +1,126 @@
+:root {
+  --accents-1: #fafafa;
+  --accents-2: #eaeaea;
+  --accents-3: #999;
+  --accents-4: #888;
+  --accents-5: #666;
+  --accents-6: #444;
+  --accents-7: #333;
+  --accents-8: #111;
+
+  --cyan: #50e3c2;
+  --cyan-dark: #29bc9b;
+  --cyan-light: #79ffe1;
+  --cyan-lighter: #aaffec;
+
+  --violet: #7928ca;
+  --violet-dark: #4c2889;
+  --violet-light: #8a63d2;
+  --violet-lighter: #e3d7fc;
+
+  --highlight-magenta: #eb367f;
+  --highlight-pink: #ff0080;
+  --highlight-purple: #f81ce5;
+  --highlight-yellow: #fff500;
+  --marketing-gray: #fafbfc;
+
+  --wv-green: #0cce6b;
+  --wv-orange: #ffa400;
+  --wv-red: #ff4e42;
+
+  --success: #0070f3;
+  --success-dark: #0761d1;
+  --success-light: #3291ff;
+  --success-lighter: #d3e5ff;
+
+  --warning: #f5a623;
+  --warning-dark: #ab570a;
+  --warning-light: #f7b955;
+  --warning-lighter: #ffefcf;
+
+  --error: #e00;
+  --error-dark: #c50000;
+  --error-light: #ff1a1a;
+  --error-lighter: #f7d4d6;
+
+  --background: #fff;
+  --foreground: #000;
+
+  --secondary: var(--accents-5);
+  --secondary-dark: var(--accents-7);
+  --secondary-light: var(--accents-3);
+  --secondary-lighter: var(--accents-2);
+
+  --code: var(--highlight-purple);
+  --link-color: var(--success);
+  --portal-opacity: 0.25;
+  --scroller-end: hsla(0, 0%, 100%, 0);
+  --scroller-start: #fff;
+
+  --selection: var(--cyan-light);
+
+  --shadow-hover: 0 30px 60px rgba(0, 0, 0, 0.12);
+  --shadow-large: 0 30px 60px rgba(0, 0, 0, 0.12);
+  --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-small: 0 5px 10px rgba(0, 0, 0, 0.12);
+  --shadow-smallest: 0px 4px 8px rgba(0, 0, 0, 0.12);
+  --shadow-sticky: 0 12px 10px -10px rgba(0, 0, 0, 0.12);
+}
+
+body {
+  --accent-color: #ccc;
+  --bkg-color: #fff;
+  --hdr-color: #000;
+  --link-color: #0070f3;
+  --text-color: #222;
+}
+
+body.dark-theme {
+  --accent-color: #333;
+  --bkg-color: #000;
+  --hdr-color: #fff;
+  --link-color: #809fff;
+  --text-color: #888;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* defaults to dark theme */
+  body {
+    --accent-color: #333;
+    --bkg-color: #000;
+    --hdr-color: #fff;
+    --link-color: #809fff;
+    --text-color: #888;
+  }
+  body.light-theme {
+    --accent-color: #ccc;
+    --bkg-color: #fff;
+    --hdr-color: #000;
+    --link-color: #0070f3;
+    --text-color: #222;
+  }
+}
+
+body {
+  background: var(--bkg-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--link-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+nav a,
+.btn-toggle {
+  color: var(--hdr-color);
+}
+
+.feature-project {
+  background: var(--accent-color);
+}
