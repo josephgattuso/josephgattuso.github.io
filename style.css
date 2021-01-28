@@ -42,62 +42,6 @@ figure {
   width: 100vw;
 }
 
-/* Contact Form */
-
-input[type="text"],
-input[type="email"],
-textarea {
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  padding: 12px;
-  resize: vertical;
-  width: 100%;
-}
-
-input[type="submit"] {
-  background: #0070f3;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
-  font-size: 1rem;
-  /* 0.5rem * 16px = 8px */
-  padding: 0.5rem 1rem;
-}
-
-label {
-  display: inline-block;
-  padding: 12px 12px 12px 0;
-}
-
-.contact-form {
-  border-radius: 5px;
-  background: var(--accents-2);
-  padding: 20px;
-  max-width: 800px;
-  margin-bottom: 100px;
-}
-
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
-}
-
-.col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 /* Navbar */
 
 .topnav {
@@ -154,6 +98,72 @@ label {
 .cover .subtitle {
   color: #444;
   font-weight: normal;
+}
+
+/* Contact Form */
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  background: #fff;
+  color: #444;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-family: "Open Sans", -apple-system, system-ui, sans-serif;
+  font-size: 0.875rem;
+  padding: 12px;
+  resize: vertical;
+  width: 100%;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+}
+
+input[type="submit"] {
+  background: #0070f3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  font-size: 1rem;
+  /* 0.5rem * 16px = 8px */
+  padding: 0.5rem 1rem;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+}
+
+label {
+  display: inline-block;
+  padding: 12px 12px 12px 0;
+}
+
+.contact-form {
+  border-radius: 5px;
+  background: var(--accents-2);
+  padding: 20px;
+  max-width: 800px;
+  margin: 0;
+  margin-bottom: 100px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* Footer */
