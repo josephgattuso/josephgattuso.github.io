@@ -16,10 +16,10 @@ a:hover {
 }
 
 .section-center {
-  width: 90vw;
-  margin: 0 auto;
-  max-width: 1170px;
   margin-top: 2rem;
+  margin: 0 auto;
+  width: 90vw;
+  max-width: 1170px;
 }
 
 main {
@@ -39,12 +39,12 @@ figure {
 
 .banner {
   height: 320px;
-  width: 100vw;
+  width: 100%;
 }
 
 /* Navbar */
 
-.topnav {
+.main-nav {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -54,7 +54,7 @@ figure {
   overflow: hidden;
 }
 
-.topnav a {
+.main-nav a {
   display: block;
   float: left;
   font-size: 1rem;
@@ -63,7 +63,7 @@ figure {
   text-decoration: none;
 }
 
-.topnav a:hover {
+.main-nav a:hover {
   text-decoration: underline;
 }
 
@@ -82,10 +82,11 @@ figure {
     #999999 44%,
     #eaeaea 100%
   ); /* Chrome, Safari */
-  align-items: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
   height: 100vh;
+  margin-top: 0;
   justify-content: center;
   text-align: center;
 }
@@ -119,6 +120,10 @@ textarea {
   -webkit-border-radius: 0px;
 }
 
+select {
+  color: #999;
+}
+
 input[type="submit"] {
   background: #0070f3;
   color: #fff;
@@ -140,7 +145,7 @@ label {
 
 .contact-form {
   border-radius: 5px;
-  background: var(--accents-2);
+  background: #eaeaea;
   padding: 20px;
   max-width: 800px;
   margin: 0;
@@ -180,7 +185,6 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  margin-top: -5px;
   width: 100%;
 }
 
@@ -257,12 +261,13 @@ footer {
 /* Carousel */
 
 .feature-project {
-  background: var(--accents-2);
+  background: #eaeaea;
   padding: 20px;
-  max-width: 720px;
+  max-width: 1170px;
 }
 
 .slider {
+  background: #eaeaea;
   height: 620px;
   overflow: hidden;
   position: relative;
@@ -280,6 +285,7 @@ footer {
 }
 
 .slide {
+  background: #eaeaea;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -295,8 +301,8 @@ footer {
 }
 
 .img {
-  background: #fff;
-  width: 100%;
+  background: #eaeaea;
+  width: 720px;
 }
 
 .slide.visible {
@@ -316,21 +322,31 @@ footer {
   figure img {
     width: 100vw;
   }
+  .banner,
+  .section-center {
+    width: 100vw;
+  }
+  h1,
+  h2,
+  h3,
+  p {
+    padding: 0 20px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
   footer {
     display: none;
   }
+  .banner {
+    max-height: 280px;
+  }
+  .main-nav {
+    display: none;
+  }
   .mobile-nav {
     display: block;
     z-index: 2;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {
-    display: none;
   }
 }
 
@@ -345,5 +361,14 @@ footer {
   }
   .slide .img {
     width: 100vw;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .header {
+    margin-top: 2rem;
+    margin: 0 auto;
+    width: 90vw;
+    max-width: 1170px;
   }
 }
