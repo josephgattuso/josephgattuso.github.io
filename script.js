@@ -27,39 +27,13 @@ btn.addEventListener('click', function () {
 
 // Carousel
 
-const sliderData = [
-  {
-    name: 'CRWN Clothing',
-    img:
-      'https://github.com/josephgattuso/crwn-clothing/raw/master/src/assets/cover.png',
-    description:
-      'Full-stack React e-commerce application. Built with React/Redux and Stripe integration (for demo only)',
-    url: 'https://gattuso-crwn-live.herokuapp.com',
-    repo: 'https://github.com/josephgattuso/crwn-clothing',
-  },
-  {
-    name: 'Custom Countdown',
-    img:
-      'https://github.com/josephgattuso/js-projects/raw/master/custom-countdown/cover.png',
-    description: 'Saving a custom countdown in your browser.',
-    url: 'https://josephgattuso.github.io/js-projects/custom-countdown',
-    repo:
-      'https://github.com/josephgattuso/js-projects/tree/master/custom-countdown',
-  },
-  {
-    name: 'Monsters Rolodex',
-    img:
-      'https://github.com/josephgattuso/monsters-rolodex/raw/master/src/images/cover.png',
-    description: 'Building a contact directory app using React.',
-    url: 'https://josephgattuso.github.io/monsters-rolodex',
-    repo: 'https://github.com/josephgattuso/monsters-rolodex',
-  },
+const projects = [
   {
     name: 'Calculator',
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/calculator/cover.png',
     description: 'Creating a simple calculator with plain JavaScript.',
-    url: 'https://josephgattuso.github.io/js-projects/calculator',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/calculator',
     repo: 'https://github.com/josephgattuso/js-projects/tree/master/calculator',
   },
   {
@@ -68,7 +42,7 @@ const sliderData = [
       'https://github.com/josephgattuso/js-projects/raw/master/quotes-generator/cover.png',
     description:
       'Using an API to build a random quote generator with Twitter integration.',
-    url: 'https://josephgattuso.github.io/js-projects/quotes-generator',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/quotes-generator',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/quotes-generator',
   },
@@ -78,15 +52,24 @@ const sliderData = [
       'https://github.com/josephgattuso/js-projects/raw/master/pokedex/cover.png',
     description:
       'Find info on Pokemon with this Pokedex app. Uses the Pokeapi.co API.',
-    url: 'https://josephgattuso.github.io/js-projects/pokedex',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/pokedex',
     repo: 'https://github.com/josephgattuso/js-projects/tree/master/pokedex',
+  },
+  {
+    name: 'Custom Countdown',
+    img:
+      'https://github.com/josephgattuso/js-projects/raw/master/custom-countdown/cover.png',
+    description: 'Saving a custom countdown in your browser.',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/custom-countdown',
+    repo:
+      'https://github.com/josephgattuso/js-projects/tree/master/custom-countdown',
   },
   {
     name: 'Hoverboard',
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/hoverboard/cover.png',
     description: 'Hoverboard app with color-change effect on mouse hover',
-    url: 'https://josephgattuso.github.io/js-projects/hoverboard',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/hoverboard',
     repo: 'https://github.com/josephgattuso/js-projects/tree/master/hoverboard',
   },
   {
@@ -94,7 +77,7 @@ const sliderData = [
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/image-carousel/cover.png',
     description: 'Web component with classic image carousel',
-    url: 'https://josephgattuso.github.io/js-projects/image-carousel',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/image-carousel',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/image-carousel',
   },
@@ -103,7 +86,7 @@ const sliderData = [
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/animated-countdown/cover.png',
     description: 'Web compononet loader with feature animated countdown',
-    url: 'https://josephgattuso.github.io/js-projects/animated-countdown',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/animated-countdown',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/animated-countdown',
   },
@@ -112,7 +95,7 @@ const sliderData = [
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/notes-app/cover.png',
     description: 'Create, Read, Edit, and Delete notes',
-    url: 'https://josephgattuso.github.io/js-projects/notes-app',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/notes-app',
     repo: 'https://github.com/josephgattuso/js-projects/tree/master/notes-app',
   },
   {
@@ -120,7 +103,7 @@ const sliderData = [
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/good-cheap-fast/cover.png',
     description: 'Optimise your next project from a set of predifined criteria',
-    url: 'https://josephgattuso.github.io/js-projects/good-cheap-fast',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/good-cheap-fast',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/good-cheap-fast',
   },
@@ -129,7 +112,7 @@ const sliderData = [
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/password-generator/cover.png',
     description: 'Generate a random password with specific user settings',
-    url: 'https://josephgattuso.github.io/js-projects/password-generator',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/password-generator',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/password-generator',
   },
@@ -139,7 +122,7 @@ const sliderData = [
       'https://github.com/josephgattuso/js-projects/raw/master/auto-text-effect/cover.png',
     description:
       'Web component with feature typing effect. Control speed using input field or keyboard arrows.',
-    url: 'https://josephgattuso.github.io/js-projects/auto-text-effect',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/auto-text-effect',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/auto-text-effect',
   },
@@ -148,7 +131,7 @@ const sliderData = [
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/double-heart-click/cover.png',
     description: 'Generate hearts at double-click events',
-    url: 'https://josephgattuso.github.io/js-projects/double-heart-click',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/double-heart-click',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/double-heart-click',
   },
@@ -158,7 +141,7 @@ const sliderData = [
       'https://github.com/josephgattuso/js-projects/raw/master/github-profiles/cover.png',
     description:
       'Search for any GitHub profile and returns key information.  Uses the GitHub API.',
-    url: 'https://josephgattuso.github.io/js-projects/github-profiles',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/github-profiles',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/github-profiles',
   },
@@ -167,7 +150,7 @@ const sliderData = [
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/toast-notifications/cover.png',
     description: 'Generate toast notifications',
-    url: 'https://josephgattuso.github.io/js-projects/toast-notifications',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/toast-notifications',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/toast-notifications',
   },
@@ -176,7 +159,8 @@ const sliderData = [
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/double-vertical-slider/cover.png',
     description: 'Image carousel with sliding double vertical panels',
-    url: 'https://josephgattuso.github.io/js-projects/double-vertical-slider',
+    tryItUrl:
+      'https://josephgattuso.github.io/js-projects/double-vertical-slider',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/double-vertical-slider',
   },
@@ -185,7 +169,7 @@ const sliderData = [
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/sticky-navigation/cover.png',
     description: 'Website template with feature sticky navigation',
-    url: 'https://josephgattuso.github.io/js-projects/sticky-navigation',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/sticky-navigation',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/sticky-navigation',
   },
@@ -194,7 +178,7 @@ const sliderData = [
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/content-placeholder/cover.png',
     description: 'Content placeholder component',
-    url: 'https://josephgattuso.github.io/js-projects/content-placeholder',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/content-placeholder',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/content-placeholder',
   },
@@ -203,7 +187,7 @@ const sliderData = [
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/kinetic-loader/cover.png',
     description: 'Kinetic page loading component',
-    url: 'https://josephgattuso.github.io/js-projects/kinetic-loader',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/kinetic-loader',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/kinetic-loader',
   },
@@ -212,7 +196,7 @@ const sliderData = [
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/drawing-app/cover.png',
     description: 'Drawing app using HTML canvas',
-    url: 'https://josephgattuso.github.io/js-projects/drawing-app',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/drawing-app',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/drawing-app',
   },
@@ -221,7 +205,7 @@ const sliderData = [
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/drag-n-drop/cover.png',
     description: 'Drag and drop component',
-    url: 'https://josephgattuso.github.io/js-projects/drag-n-drop',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/drag-n-drop',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/drag-n-drop',
   },
@@ -230,7 +214,7 @@ const sliderData = [
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/button-ripple/cover.png',
     description: 'Button ripple effect',
-    url: 'https://josephgattuso.github.io/js-projects/button-ripple',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/button-ripple',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/button-ripple',
   },
@@ -239,7 +223,7 @@ const sliderData = [
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/theme-clock/cover.png',
     description: 'Theme clock with feature dark mode toggle',
-    url: 'https://josephgattuso.github.io/js-projects/theme-clock',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/theme-clock',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/theme-clock',
   },
@@ -248,7 +232,7 @@ const sliderData = [
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/background-slider/cover.png',
     description: 'Background slider project',
-    url: 'https://josephgattuso.github.io/js-projects/background-slider',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/background-slider',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/background-slider',
   },
@@ -259,7 +243,7 @@ const sliderData = [
       'https://github.com/josephgattuso/js-projects/raw/master/movie-app/cover.png',
     description:
       'Search for movies and view movie info and ratings. Uses the moviedb API',
-    url: 'https://josephgattuso.github.io/js-projects/movie-app',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/movie-app',
     repo: 'https://github.com/josephgattuso/js-projects/tree/master/movie-app',
   },
   {
@@ -267,7 +251,7 @@ const sliderData = [
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/drink-water/cover.png',
     description: 'Track your water intake with this handy water tracking app',
-    url: 'https://josephgattuso.github.io/js-projects/drink-water',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/drink-water',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/drink-water',
   },
@@ -276,7 +260,8 @@ const sliderData = [
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/incrementing-counter/cover.png',
     description: 'Incrementing counter widget',
-    url: 'https://josephgattuso.github.io/js-projects/incrementing-counter',
+    tryItUrl:
+      'https://josephgattuso.github.io/js-projects/incrementing-counter',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/incrementing-counter',
   },
@@ -285,7 +270,7 @@ const sliderData = [
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/animated-navigation/cover.png',
     description: 'Website template with feature animated expanding navigation',
-    url: 'https://josephgattuso.github.io/js-projects/animated-navigation',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/animated-navigation',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/animated-navigation',
   },
@@ -295,7 +280,8 @@ const sliderData = [
       'https://github.com/josephgattuso/js-projects/raw/master/random-choice-picker/cover.png',
     description:
       'Enter all of the choices divided by commas. Then press enter when you are done.',
-    url: 'https://josephgattuso.github.io/js-projects/random-choice-picker',
+    tryItUrl:
+      'https://josephgattuso.github.io/js-projects/random-choice-picker',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/random-choice-picker',
   },
@@ -304,7 +290,7 @@ const sliderData = [
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/faq-collapse/cover.png',
     description: 'Frequently asked questions',
-    url: 'https://josephgattuso.github.io/js-projects/faq-collapse',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/faq-collapse',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/faq-collapse',
   },
@@ -313,7 +299,7 @@ const sliderData = [
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/event-keycodes/cover.png',
     description: 'Press any key to get the keycode',
-    url: 'https://josephgattuso.github.io/js-projects/event-keycodes',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/event-keycodes',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/event-keycodes',
   },
@@ -323,7 +309,7 @@ const sliderData = [
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/sound-board/cover.png',
     description: 'Handy sound effects board',
-    url: 'https://josephgattuso.github.io/js-projects/sound-board',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/sound-board',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/sound-board',
   },
@@ -332,7 +318,7 @@ const sliderData = [
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/form-wave/cover.png',
     description: 'Login form with feature animated input text',
-    url: 'https://josephgattuso.github.io/js-projects/form-wave',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/form-wave',
     repo: 'https://github.com/josephgattuso/js-projects/tree/master/form-wave',
   },
   {
@@ -340,7 +326,7 @@ const sliderData = [
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/split-landing/cover.png',
     description: 'Website template with feature landing page',
-    url: 'https://josephgattuso.github.io/js-projects/split-landing',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/split-landing',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/split-landing',
   },
@@ -349,7 +335,7 @@ const sliderData = [
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/scroll-animation/cover.png',
     description: 'Web component with feature scrolling animation effect',
-    url: 'https://josephgattuso.github.io/js-projects/scroll-animation',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/scroll-animation',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/scroll-animation',
   },
@@ -358,7 +344,7 @@ const sliderData = [
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/blurry-loading/cover.png',
     description: 'Web component with feature blurry page loading effect',
-    url: 'https://josephgattuso.github.io/js-projects/blurry-loading',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/blurry-loading',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/blurry-loading',
   },
@@ -367,7 +353,7 @@ const sliderData = [
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/hidden-search/cover.png',
     description: 'Web component with feature hidden search widget',
-    url: 'https://josephgattuso.github.io/js-projects/hidden-search',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/hidden-search',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/hidden-search',
   },
@@ -376,7 +362,7 @@ const sliderData = [
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/rotating-navigation/cover.png',
     description: 'Web component with feature rotating navigation animation',
-    url: 'https://josephgattuso.github.io/js-projects/rotating-navigation',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/rotating-navigation',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/rotating-navigation',
   },
@@ -385,48 +371,91 @@ const sliderData = [
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/progress-steps/cover.png',
     description: 'Web component timeline with feature progress steps',
-    url: 'https://josephgattuso.github.io/js-projects/progress-steps',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/progress-steps',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/progress-steps',
   },
-  {
-    name: 'Expanding Cards',
-    img:
-      'https://github.com/josephgattuso/js-projects/raw/master/expanding-cards/cover.png',
-    description: 'Web component with feature expanding cards',
-    url: 'https://josephgattuso.github.io/js-projects/expanding-cards',
-    repo:
-      'https://github.com/josephgattuso/js-projects/tree/master/expanding-cards',
-  },
 ];
 
-for (let i = 0; i < sliderData.length; i++) {
+for (let i = 0; i < projects.length; i++) {
   const slider = document.querySelector('.slider');
-  const { img, name, description, url, repo } = sliderData[i];
-  const slideData = `
-    <figure class="slide ${i == 0 ? 'visible' : ''}">
-      <a href=${url} target="_blank" rel="noopener noreferrer">
-        <img class="img" src="${img}" title=${name} alt="${name}" />
-      </a>  
-        <figcaption>
-          <h3>${name}</h3>
-          <p>
-            ${description}
-          </p>
-          <div>
-          <a href=${repo} target="_blank" rel="noopener noreferrer">View Source</a>
-          <a href=${url} target="_blank" rel="noopener noreferrer">Live Demo</a>
-        </div>
-        </figcaption>
-    </figure>
+  const { name, description, tryItUrl, repo } = projects[i];
+  const projectData = `
+    <aside class="slide ${i == 0 ? 'show' : ''}">
+      <h3>${name}</h3>
+      <a href="${tryItUrl}" target="_blank">
+      <picture>
+        <source
+          type="image/webp"
+          srcset="
+            https://github.com/josephgattuso/js-projects/raw/master/${name
+              .replace(/\s+/g, '-')
+              .toLowerCase()}/cover.webp
+          "
+        />
+        <source
+          type="image/png"
+          srcset="
+          https://github.com/josephgattuso/js-projects/raw/master/${name
+            .replace(/\s+/g, '-')
+            .toLowerCase()}/cover.png
+        "
+        />
+        <img
+          class="img"
+          src="https://github.com/josephgattuso/js-projects/raw/master/${name
+            .replace(/\s+/g, '-')
+            .toLowerCase()}/cover.png"
+          title="${name.replace(/\s+/g, '&nbsp;')}"
+          alt="${name.replace(/\s+/g, '&nbsp;')}"
+          />
+      </picture>
+    </a>
+    <div>
+      <p>${description}</p>
+      <a href="${repo}" target="_blank" rel="noopener noreferrer">
+        View Source
+      </a>
+      <a href="${tryItUrl}" target="_blank" rel="noopener noreferrer">
+        Live Demo
+      </a>
+    </div>
+  </aside>
   `;
-  slider.innerHTML += slideData;
+  slider.innerHTML += projectData;
 }
 
+//select all slides
 const slides = document.querySelectorAll('.slide');
+
+//set slide count
 let currentSlide = 0;
-const slideInterval = setInterval(() => {
-  slides[currentSlide].classList.remove('visible');
-  currentSlide = (currentSlide + 1) % slides.length;
-  slides[currentSlide].classList.add('visible');
-}, 5000);
+
+//increment slide index
+const nextSlide = () => {
+  changeSlide(currentSlide + 1);
+};
+
+//decrement slide index
+const prevSlide = () => {
+  changeSlide(currentSlide - 1);
+};
+
+//select arrow controls
+const next = document.querySelector('.next-btn');
+const prev = document.querySelector('.prev-btn');
+
+//click event that passes to changeSlide function
+next.addEventListener('click', nextSlide, false);
+prev.addEventListener('click', prevSlide, false);
+
+const changeSlide = clicked => {
+  //selects class for current slide
+  slides[currentSlide].className = 'slide';
+
+  //checks remainder of link to select current slides
+  currentSlide = (clicked + slides.length) % slides.length;
+
+  //adds css class to show current slide
+  slides[currentSlide].className = 'slide show';
+};

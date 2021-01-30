@@ -28,7 +28,7 @@ main {
   place-items: center;
 }
 
-figure {
+div {
   margin: 0;
   padding: 0;
 }
@@ -219,19 +219,19 @@ footer {
 }
 
 .btn {
-  background: #0070f3;
+  background: #808080;
   color: #fff;
   cursor: pointer;
   border: none;
-  border-radius: 4px;
   font-size: 1rem;
   margin-bottom: 1rem;
   /* 0.5rem * 16px = 8px */
   padding: 0.5rem 1.5rem;
+  width: 30%;
 }
 
 .btn:hover {
-  opacity: 0.9;
+  opacity: 0.6;
 }
 
 .btn:focus {
@@ -249,8 +249,15 @@ footer {
 
 .feature-project {
   background: #eaeaea;
-  padding: 20px;
   max-width: 1170px;
+  padding-top: 20px;
+}
+
+.feature-project h3,
+.feature-project p,
+.feature-project a:not(:first-of-type) {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .slider {
@@ -259,10 +266,6 @@ footer {
   overflow: hidden;
   position: relative;
   text-align: center;
-}
-
-.slider a {
-  margin-left: 10px;
 }
 
 .slide {
@@ -282,16 +285,24 @@ footer {
 }
 
 .img {
-  background: #eaeaea;
   width: 720px;
 }
 
-.slide.visible {
+.slide.show {
   opacity: 1;
   z-index: 10;
 }
 
 /* Media Queries */
+
+@media only screen and (min-width: 600px) {
+  .header {
+    margin-top: 2rem;
+    margin: 0 auto;
+    width: 90vw;
+    max-width: 1170px;
+  }
+}
 
 @media screen and (max-width: 600px) {
   input[type='submit'],
@@ -300,7 +311,7 @@ footer {
     margin-top: 0;
     width: 100%;
   }
-  figure img {
+  div img {
     width: 100vw;
   }
   .banner,
@@ -341,7 +352,7 @@ footer {
 @media only screen and (max-width: 600px) {
   .feature-project {
     margin: 0;
-    padding: 20px 0;
+    padding: 0;
     width: 100%;
   }
   .slider {
@@ -349,14 +360,5 @@ footer {
   }
   .slide .img {
     width: 100vw;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  .header {
-    margin-top: 2rem;
-    margin: 0 auto;
-    width: 90vw;
-    max-width: 1170px;
   }
 }
