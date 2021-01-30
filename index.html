@@ -51,7 +51,11 @@
       </nav>
       <nav class="main-nav" id="myTopnav" role="navigation">
         <a href="/" class="active">
-          <img src="images/logo.png" width="36" alt="" />
+          <picture>
+            <source type="image/webp" srcset="images/logo.webp" />
+            <source type="image/png" srcset="images/logo.png" />
+            <img src="images/logo.png" width="36" height="36" alt="Logo" />
+          </picture>
         </a>
         <a href="#home" class="active">Home</a>
         <a href="#about">About</a>
@@ -131,12 +135,19 @@
     <main>
       <section class="section-center" id="about">
         <h2 class="center">About</h2>
-        <img
-          src="https://cdn.sanity.io/images/jmhf2rn8/portfolio/8933638180de338ef679fa5e5d86d96732c887bb-1600x1000.png"
-          class="banner"
-          style="object-fit: cover"
-          alt=""
-        />
+        <!-- Source: https://cdn.sanity.io/images/jmhf2rn8/portfolio/8933638180de338ef679fa5e5d86d96732c887bb-1600x1000.png -->
+        <picture>
+          <source type="image/webp" srcset="images/tools-and-such.webp" />
+          <source type="image/png" srcset="images/tools-and-such.png" />
+          <img
+            class="banner"
+            src="images/tools-and-such.png"
+            width="1200"
+            height="675"
+            style="object-fit: cover; max-width: 100vw"
+            alt="Tools and such"
+          />
+        </picture>
         <p>
           Hi there! My name is Joseph and I'm an aspiring Web Developer based in
           London. My current focus is on building gorgeous web applications,
@@ -159,11 +170,20 @@
 
       <section class="section-center" id="projects">
         <h2 class="center">Projects</h2>
-        <img
-          class="banner"
-          src="https://images.unsplash.com/photo-1532264523420-881a47db012d"
-          alt=""
-        />
+        <!-- Source: https://images.unsplash.com/photo-1532264523420-881a47db012d -->
+        <picture>
+          <source type="image/webp" srcset="images/timj-ots0EOYuGtU.webp" />
+          <source type="image/jpg" srcset="images/timj-ots0EOYuGtU.jpg" />
+          <img
+            class="banner"
+            src="images/timj-ots0EOYuGtU.jpg"
+            width="2400"
+            height="800"
+            style="max-width: 100vw"
+            alt="Geometric dome"
+          />
+        </picture>
+
         <!-- <img
           src="images/timj-ots0EOYuGtU-original.jpg"
           class="banner"
@@ -173,7 +193,7 @@
             images/timj-ots0EOYuGtU-large.jpg  1920w
           "
         /> -->
-        <!-- <img src="images/timj-ots0EOYuGtU-unsplash.jpg" class="banner" alt="" /> -->
+        <!-- <img src="images/timj-ots0EOYuGtU.jpg" class="banner" alt="" /> -->
         <div class="feature-project section-center">
           <h3>50 JavaScript Apps</h3>
           <p>
