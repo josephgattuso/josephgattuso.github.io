@@ -381,9 +381,8 @@ for (let i = 0; i < projects.length; i++) {
   const slider = document.querySelector('.slider');
   const { name, description, tryItUrl, repo } = projects[i];
   const projectData = `
-    <aside class="slide ${i == 0 ? 'show' : ''}">
-      <h3>${name}</h3>
-      <a href="${tryItUrl}" target="_blank">
+    <figure class="slide ${i == 0 ? 'show' : ''}">
+    <a href="${tryItUrl}" target="_blank" rel="noopener noreferrer">
       <picture>
         <source
           type="image/webp"
@@ -410,8 +409,9 @@ for (let i = 0; i < projects.length; i++) {
           alt="${name.replace(/\s+/g, '&nbsp;')}"
           />
       </picture>
-    </a>
+      </a>
     <div>
+      <h3>${name}</h3>
       <p>${description}</p>
       <a href="${repo}" target="_blank" rel="noopener noreferrer">
         View Source
@@ -420,7 +420,7 @@ for (let i = 0; i < projects.length; i++) {
         Live Demo
       </a>
     </div>
-  </aside>
+  </figure>
   `;
   slider.innerHTML += projectData;
 }
@@ -430,6 +430,12 @@ const slides = document.querySelectorAll('.slide');
 
 //set slide count
 let currentSlide = 0;
+
+const slideInterval = setInterval(() => {
+  slides[curerntSlide].classList.remove('show');
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].classList.add('show');
+}, 5000);
 
 //increment slide index
 const nextSlide = () => {
