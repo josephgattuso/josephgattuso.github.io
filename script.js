@@ -127,7 +127,7 @@ const projects = [
       'https://github.com/josephgattuso/js-projects/tree/master/auto-text-effect',
   },
   {
-    name: 'Hearts Click',
+    name: 'Double Heart Click',
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/double-heart-click/cover.png',
     description: 'Generate hearts at double-click events',
@@ -136,7 +136,7 @@ const projects = [
       'https://github.com/josephgattuso/js-projects/tree/master/double-heart-click',
   },
   {
-    name: 'Search Profiles',
+    name: 'GitHub Profiles',
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/github-profiles/cover.png',
     description:
@@ -155,7 +155,7 @@ const projects = [
       'https://github.com/josephgattuso/js-projects/tree/master/toast-notifications',
   },
   {
-    name: 'Vertical Slider',
+    name: 'Double Vertical Slider',
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/double-vertical-slider/cover.png',
     description: 'Image carousel with sliding double vertical panels',
@@ -201,7 +201,7 @@ const projects = [
       'https://github.com/josephgattuso/js-projects/tree/master/drawing-app',
   },
   {
-    name: "Drag 'N' Drop",
+    name: 'Drag N Drop',
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/drag-n-drop/cover.png',
     description: 'Drag and drop component',
@@ -275,7 +275,7 @@ const projects = [
       'https://github.com/josephgattuso/js-projects/tree/master/animated-navigation',
   },
   {
-    name: 'Random Picker',
+    name: 'Random Choice Picker',
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/random-choice-picker/cover.png',
     description:
@@ -349,7 +349,7 @@ const projects = [
       'https://github.com/josephgattuso/js-projects/tree/master/blurry-loading',
   },
   {
-    name: 'Search Widget',
+    name: 'Hidden Search',
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/hidden-search/cover.png',
     description: 'Web component with feature hidden search widget',
