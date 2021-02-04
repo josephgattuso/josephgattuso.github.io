@@ -115,3 +115,9 @@ nav a,
 .btn-toggle {
   color: var(--hdr-color);
 }
+
+.feature-project,
+.slider,
+.contact-form {
+  background: var(--background-tertiary);
+}
