@@ -416,6 +416,8 @@ for (let i = 0; i < projects.length; i++) {
             .toLowerCase()}/cover.webp"
           title="${name.replace(/\s+/g, '&nbsp;')}"
           alt="${name.replace(/\s+/g, '&nbsp;')}"
+          width="720"
+          height="320"
           />
       </picture>
       </a>
