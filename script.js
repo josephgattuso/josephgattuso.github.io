@@ -29,6 +29,24 @@ btn.addEventListener('click', function () {
 
 const projects = [
   {
+    name: 'Light Dark Mode',
+    img:
+      'https://github.com/josephgattuso/js-projects/raw/master/light-dark-mode/cover.webp',
+    description: 'A website example that toggles between light and dark mode.',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/light-dark-mode',
+    repo:
+      'https://github.com/josephgattuso/js-projects/tree/master/light-dark-mode',
+  },
+  {
+    name: 'Joke Teller',
+    img:
+      'https://github.com/josephgattuso/js-projects/raw/master/joke-teller/cover.webp',
+    description: 'An app that combines a Joke API with a speech-to-text API.',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/joke-teller',
+    repo:
+      'https://github.com/josephgattuso/js-projects/tree/master/joke-teller',
+  },
+  {
     name: 'Calculator',
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/calculator/cover.png',
