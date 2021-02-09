@@ -29,6 +29,26 @@ btn.addEventListener('click', function () {
 
 const projects = [
   {
+    name: '3D Boxes Background',
+    img:
+      'https://github.com/josephgattuso/js-projects/raw/master/3d-boxes-background/cover.webp',
+    description:
+      'Click the button to see a shrink effect on the 3D background boxes.',
+    tryItUrl: 'https://josephgattuso.github.io/js-projects/3d-boxes-background',
+    repo:
+      'https://github.com/josephgattuso/js-projects/tree/master/3d-boxes-background',
+  },
+  {
+    name: 'Password Image Strength',
+    img:
+      'https://github.com/josephgattuso/js-projects/raw/master/password-image-strength/cover.webp',
+    description: 'Change the password to see the image blur effect.',
+    tryItUrl:
+      'https://josephgattuso.github.io/js-projects/password-image-strength',
+    repo:
+      'https://github.com/josephgattuso/js-projects/tree/master/password-image-strength',
+  },
+  {
     name: 'Light Dark Mode',
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/light-dark-mode/cover.webp',
