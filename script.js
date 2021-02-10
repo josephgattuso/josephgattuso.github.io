@@ -1,31 +1,4 @@
-// Navbar
-
-const btn = document.querySelector('.btn-toggle');
-const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-
-const currentTheme = localStorage.getItem('theme');
-if (currentTheme == 'dark') {
-  document.body.classList.toggle('dark-theme');
-} else if (currentTheme == 'light') {
-  document.body.classList.toggle('light-theme');
-}
-
-btn.addEventListener('click', function () {
-  if (prefersDarkScheme.matches) {
-    document.body.classList.toggle('light-theme');
-    var theme = document.body.classList.contains('light-theme')
-      ? 'light'
-      : 'dark';
-  } else {
-    document.body.classList.toggle('dark-theme');
-    var theme = document.body.classList.contains('dark-theme')
-      ? 'dark'
-      : 'light';
-  }
-  localStorage.setItem('theme', theme);
-});
-
-// Carousel
+// Projects Section
 
 const projects = [
   {
@@ -94,32 +67,6 @@ const projects = [
     repo: 'https://github.com/josephgattuso/js-projects/tree/master/pokedex',
   },
   {
-    name: 'Custom Countdown',
-    img:
-      'https://github.com/josephgattuso/js-projects/raw/master/custom-countdown/cover.webp',
-    description: 'Saving a custom countdown in your browser.',
-    tryItUrl: 'https://josephgattuso.github.io/js-projects/custom-countdown',
-    repo:
-      'https://github.com/josephgattuso/js-projects/tree/master/custom-countdown',
-  },
-  {
-    name: 'Hoverboard',
-    img:
-      'https://github.com/josephgattuso/js-projects/raw/master/hoverboard/cover.webp',
-    description: 'Hoverboard app with color-change effect on mouse hover',
-    tryItUrl: 'https://josephgattuso.github.io/js-projects/hoverboard',
-    repo: 'https://github.com/josephgattuso/js-projects/tree/master/hoverboard',
-  },
-  {
-    name: 'Image Carousel',
-    img:
-      'https://github.com/josephgattuso/js-projects/raw/master/image-carousel/cover.webp',
-    description: 'Web component with classic image carousel',
-    tryItUrl: 'https://josephgattuso.github.io/js-projects/image-carousel',
-    repo:
-      'https://github.com/josephgattuso/js-projects/tree/master/image-carousel',
-  },
-  {
     name: 'Notes App',
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/notes-app/cover.webp',
@@ -146,25 +93,6 @@ const projects = [
       'https://github.com/josephgattuso/js-projects/tree/master/password-generator',
   },
   {
-    name: 'Auto Text Effect',
-    img:
-      'https://github.com/josephgattuso/js-projects/raw/master/auto-text-effect/cover.webp',
-    description:
-      'Web component with feature typing effect. Control speed using input field or keyboard arrows.',
-    tryItUrl: 'https://josephgattuso.github.io/js-projects/auto-text-effect',
-    repo:
-      'https://github.com/josephgattuso/js-projects/tree/master/auto-text-effect',
-  },
-  {
-    name: 'Double Heart Click',
-    img:
-      'https://github.com/josephgattuso/js-projects/raw/master/double-heart-click/cover.webp',
-    description: 'Generate hearts at double-click events',
-    tryItUrl: 'https://josephgattuso.github.io/js-projects/double-heart-click',
-    repo:
-      'https://github.com/josephgattuso/js-projects/tree/master/double-heart-click',
-  },
-  {
     name: 'GitHub Profiles',
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/github-profiles/cover.webp',
@@ -173,15 +101,6 @@ const projects = [
     tryItUrl: 'https://josephgattuso.github.io/js-projects/github-profiles',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/github-profiles',
-  },
-  {
-    name: 'Toast Notifications',
-    img:
-      'https://github.com/josephgattuso/js-projects/raw/master/toast-notifications/cover.webp',
-    description: 'Generate toast notifications',
-    tryItUrl: 'https://josephgattuso.github.io/js-projects/toast-notifications',
-    repo:
-      'https://github.com/josephgattuso/js-projects/tree/master/toast-notifications',
   },
   {
     name: 'Double Vertical Slider',
@@ -203,24 +122,6 @@ const projects = [
       'https://github.com/josephgattuso/js-projects/tree/master/sticky-navigation',
   },
   {
-    name: 'Content Placeholder',
-    img:
-      'https://github.com/josephgattuso/js-projects/raw/master/content-placeholder/cover.webp',
-    description: 'Content placeholder component',
-    tryItUrl: 'https://josephgattuso.github.io/js-projects/content-placeholder',
-    repo:
-      'https://github.com/josephgattuso/js-projects/tree/master/content-placeholder',
-  },
-  {
-    name: 'Kinetic Loader',
-    img:
-      'https://github.com/josephgattuso/js-projects/raw/master/kinetic-loader/cover.webp',
-    description: 'Kinetic page loading component',
-    tryItUrl: 'https://josephgattuso.github.io/js-projects/kinetic-loader',
-    repo:
-      'https://github.com/josephgattuso/js-projects/tree/master/kinetic-loader',
-  },
-  {
     name: 'Drawing App',
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/drawing-app/cover.webp',
@@ -237,15 +138,6 @@ const projects = [
     tryItUrl: 'https://josephgattuso.github.io/js-projects/drag-n-drop',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/drag-n-drop',
-  },
-  {
-    name: 'Button Ripple',
-    img:
-      'https://github.com/josephgattuso/js-projects/raw/master/button-ripple/cover.webp',
-    description: 'Button ripple effect',
-    tryItUrl: 'https://josephgattuso.github.io/js-projects/button-ripple',
-    repo:
-      'https://github.com/josephgattuso/js-projects/tree/master/button-ripple',
   },
   {
     name: 'Theme Clock',
@@ -295,15 +187,6 @@ const projects = [
       'https://github.com/josephgattuso/js-projects/tree/master/incrementing-counter',
   },
   {
-    name: 'Animated Navigation',
-    img:
-      'https://github.com/josephgattuso/js-projects/raw/master/animated-navigation/cover.webp',
-    description: 'Website template with feature animated expanding navigation',
-    tryItUrl: 'https://josephgattuso.github.io/js-projects/animated-navigation',
-    repo:
-      'https://github.com/josephgattuso/js-projects/tree/master/animated-navigation',
-  },
-  {
     name: 'Random Choice Picker',
     img:
       'https://github.com/josephgattuso/js-projects/raw/master/random-choice-picker/cover.webp',
@@ -341,14 +224,6 @@ const projects = [
     tryItUrl: 'https://josephgattuso.github.io/js-projects/sound-board',
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/sound-board',
-  },
-  {
-    name: 'Form Wave',
-    img:
-      'https://github.com/josephgattuso/js-projects/raw/master/form-wave/cover.webp',
-    description: 'Login form with feature animated input text',
-    tryItUrl: 'https://josephgattuso.github.io/js-projects/form-wave',
-    repo: 'https://github.com/josephgattuso/js-projects/tree/master/form-wave',
   },
   {
     name: 'Split Landing',
@@ -395,15 +270,6 @@ const projects = [
     repo:
       'https://github.com/josephgattuso/js-projects/tree/master/rotating-navigation',
   },
-  {
-    name: 'Progress Steps',
-    img:
-      'https://github.com/josephgattuso/js-projects/raw/master/progress-steps/cover.webp',
-    description: 'Web component timeline with feature progress steps',
-    tryItUrl: 'https://josephgattuso.github.io/js-projects/progress-steps',
-    repo:
-      'https://github.com/josephgattuso/js-projects/tree/master/progress-steps',
-  },
 ];
 
 for (let i = 0; i < projects.length; i++) {
@@ -441,7 +307,7 @@ for (let i = 0; i < projects.length; i++) {
           />
       </picture>
       </a>
-    <div>
+    <figcaption>
       <h3>${name}</h3>
       <p>${description}</p>
       <a href="${repo}" target="_blank" rel="noopener noreferrer">
@@ -450,7 +316,7 @@ for (let i = 0; i < projects.length; i++) {
       <a href="${tryItUrl}" target="_blank" rel="noopener noreferrer">
         Live Demo
       </a>
-    </div>
+    </figcaption>
   </figure>
   `;
   slider.innerHTML += projectData;

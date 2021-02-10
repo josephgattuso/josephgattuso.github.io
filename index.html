@@ -17,57 +17,20 @@
   <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="./theme.css">
   <title>Joseph Gattuso</title>
 </head>
-  <body id="top">
-    <header class="header">
-      <nav class="mobile-nav" id="topnav">
-        <ul>
-          <li class="active">
-            <a href="#top" aria-label="Home">
-              <i class="fas fa-home"></i>
-            </a>
-            <p>Home</p>
-          </li>
-          <li>
-            <a href="#about" aria-label="About">
-              <i class="fas fa-book-open"></i>
-            </a>
-            <p>About</p>
-          </li>
-          <li>
-            <a href="#projects" aria-label="Projects">
-              <i class="fas fa-box"></i>
-            </a>
-            <p>Projects</p>
-          </li>
-          <li>
-            <a href="#contact" aria-label="Contact">
-              <i class="fas fa-users"></i>
-            </a>
-            <p>Contact</p>
-          </li>
-        </ul>
-      </nav>
-      <nav class="main-nav" id="myTopnav" role="navigation">
-        <a href="/" class="active">
-          <picture>
-            <source type="image/webp" srcset="images/logo.webp" />
-            <source type="image/png" srcset="images/logo.png" />
-            <img src="images/logo.png" width="36" height="36" alt="Logo" />
-          </picture>
-        </a>
-        <a href="#home" class="active" aria-label="Home">Home</a>
-        <a href="#about" aria-label="About">About</a>
-        <a href="#projects" aria-label="Projects">Projects</a>
-        <a href="#contact" aria-label="Contact">Contact</a>
-        <button class="btn-toggle" aria-label="Dark Mode Toggle">
-          <i class="fas fa-sun"></i>
-        </button>
-      </nav>
-    </header>
-    <section class="cover section-center" id="intro" style="color: #444">
+  <body>
+    <nav>
+      <a href="/">
+        <img src="images/logo.png" height="36" width="36" alt="" />
+      </a>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <!-- Header Section -->
+    <section class="cover section" id="intro" style="color: #444">
       <h1>Joseph Gattuso</h1>
       <h2 class="subtitle">JavaScript Developer | UI/UX Enthusiast</h2>
       <ul class="social">
@@ -136,150 +99,129 @@
         </li>
       </ul>
     </section>
-    <main>
-      <section class="section-center" id="about">
-        <h2 class="center">About</h2>
-        <!-- Source: https://cdn.sanity.io/images/jmhf2rn8/portfolio/8933638180de338ef679fa5e5d86d96732c887bb-1600x1000.png -->
-        <picture>
-          <source type="image/webp" srcset="images/tools-and-such.webp" />
-          <source type="image/png" srcset="images/tools-and-such.png" />
-          <img
-            class="banner"
-            src="images/tools-and-such.png"
-            width="1200"
-            height="675"
-            style="object-fit: cover; max-width: 100vw"
-            alt="Tools and such"
-          />
-        </picture>
-        <p>
-          Hi there! My name is Joseph and I'm an aspiring Web Developer based in
-          London. My current focus is on building gorgeous web applications,
-          mostly with code based on JavaScript frameworks.
-        </p>
-        <p>
-          One of the main reasons for my application to Founders and Coders is
-          to learn how to code! I appreciate how the coursework is structured
-          through pair-programming and completing projects (I am very much a
-          tactile learner!)
-        </p>
-        <p>
-          It is true there are some great resources freely available to learn
-          programming. But we need to meet new friends and colleagues who share
-          our visions to make greater change in the world today. This is why I
-          am applying to Founders and Coders; to become part of a fantastic
-          developer community.
-        </p>
-      </section>
-
-      <section class="projects section-center" id="projects">
-        <h2 class="center">Projects</h2>
-        <!-- Source: https://images.unsplash.com/photo-1532264523420-881a47db012d -->
-        <picture>
-          <source type="image/webp" srcset="images/timj-ots0EOYuGtU.webp" />
-          <source type="image/jpg" srcset="images/timj-ots0EOYuGtU.jpg" />
-          <img
-            class="banner"
-            src="images/timj-ots0EOYuGtU.jpg"
-            width="2400"
-            height="800"
-            style="max-width: 100vw"
-            alt="Geometric dome"
-          />
-        </picture>
-
-        <div class="feature-project">
-          <div class="section-center">
-            <h3>50 JavaScript Apps</h3>
-            <p>
-              A fun challenge, to complete a collection of 50 projects within 50
-              days, inspired from Brad Traversy and Florin Pop’s ‘50 Projects 50
-              Days’. Completed 20 projects and made contributions to 3+ other
-              projects.
-            </p>
-            <p>Some apps that I really like, that I made:</p>
-            <div class="buttons-container">
-              <button class="btn prev-btn" aria-label="Previous Project">
-                <i class="fas fa-arrow-left"></i> Prev
-              </button>
-              <!-- <button class="btn"><i class="fas fa-play"></i></button> -->
-              <button class="btn next-btn" aria-label="Next Project">
-                Next <i class="fas fa-arrow-right"></i>
-              </button>
-            </div>
-            <div class="slider"></div>
+    <!-- About Section -->
+    <section class="section" id="about">
+      <h2 class="title">About</h2>
+      <img
+        class="banner"
+        src="images/tool-shed.webp"
+        width="1200"
+        height="675"
+        style="object-fit: cover; width: 100vw"
+        alt="Tools graphic"
+      />
+      <p>
+        Hi there! My name is Joseph and I'm an aspiring Web Developer based in
+        London. My current focus is on building gorgeous web applications,
+        mostly with code based on JavaScript frameworks.
+      </p>
+      <p>
+        One of the main reasons for my application to Founders and Coders is to
+        learn how to code! I appreciate how the coursework is structured through
+        pair-programming and completing projects (I am very much a tactile
+        learner!)
+      </p>
+      <p>
+        It is true there are some great resources freely available to learn
+        programming. But we need to meet new friends and colleagues who share
+        our visions to make greater change in the world today. This is why I am
+        applying to Founders and Coders; to become part of a fantastic developer
+        community.
+      </p>
+    </section>
+    <!-- Projects Section -->
+    <section class="projects section" id="projects">
+      <h2 class="title">Projects</h2>
+      <img
+        class="banner"
+        src="images/tim-j.webp"
+        width="2400"
+        height="800"
+        style="max-width: 100vw"
+        alt="Geometric dome"
+      />
+      <div class="feature-project">
+        <div class="section">
+          <h3>50 JavaScript Apps</h3>
+          <p>
+            A fun challenge, to complete a collection of 50 projects within 50
+            days, inspired from Brad Traversy and Florin Pop’s ‘50 Projects 50
+            Days’. Completed 20 projects and made contributions to 3+ other
+            projects.
+          </p>
+          <p>Some apps that I really like, that I made:</p>
+          <div class="slider"></div>
+          <div class="buttons-container">
+            <button class="btn prev-btn" saria-label="Previous Project">
+              <i class="fas fa-arrow-left"></i> Prev
+            </button>
+            <!-- <button class="btn"><i class="fas fa-play"></i></button> -->
+            <button class="btn next-btn" aria-label="Next Project">
+              Next <i class="fas fa-arrow-right"></i>
+            </button>
           </div>
         </div>
-      </section>
-
-      <section class="section-center" id="contact">
-        <h2 class="center">Contact</h2>
-        <p>
-          Whether you would like to discuss working together, or just want to
-          grab a virtual coffee, it would also be great to hear from you! Feel
-          free to fill out the contact form below.
-        </p>
-
-        <aside class="contact-form">
-          <form action="https://formspree.io/f/xnqowlga" method="POST">
-            <div class="row">
-              <div class="col-25">
-                <label for="name">Name</label>
-              </div>
-              <div class="col-75">
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Your name"
-                />
-              </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+      <h2 class="title">Contact</h2>
+      <p>
+        Whether you would like to discuss working together, or just want to grab
+        a virtual coffee, it would also be great to hear from you! Feel free to
+        fill out the contact form below.
+      </p>
+      <aside class="contact-form">
+        <form action="https://formspree.io/f/xnqowlga" method="POST">
+          <div class="row">
+            <div class="col-25">
+              <label class="label" for="name">Name</label>
             </div>
-            <div class="row">
-              <div class="col-25">
-                <label for="email">Email</label>
-              </div>
-              <div class="col-75">
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Your email"
-                />
-              </div>
+            <div class="col-75">
+              <input
+                class="input"
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+              />
             </div>
-            <div class="row">
-              <div class="col-25">
-                <label for="type">Message Type</label>
-              </div>
-              <div class="col-75">
-                <select id="type" name="type">
-                  <option value="fun">Just For Fun</option>
-                  <option value="projects">Projects</option>
-                  <option value="work">Work</option>
-                </select>
-              </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label class="label" for="email">Email</label>
             </div>
-            <div class="row">
-              <div class="col-25">
-                <label for="subject">Subject</label>
-              </div>
-              <div class="col-75">
-                <textarea
-                  id="subject"
-                  name="subject"
-                  placeholder="Write something"
-                  style="height: 200px"
-                ></textarea>
-              </div>
+            <div class="col-75">
+              <input
+                class="input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your email"
+              />
             </div>
-            <div class="row">
-              <input class="btn" type="submit" value="Submit" />
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label class="label" for="subject">Subject</label>
             </div>
-          </form>
-        </aside>
-      </section>
-    </main>
+            <div class="col-75">
+              <textarea
+                class="input"
+                id="subject"
+                name="subject"
+                placeholder="Write something"
+                style="height: 200px"
+              ></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <input class="btn submit" type="submit" value="Submit" />
+          </div>
+        </form>
+      </aside>
+    </section>
+    <!-- Footer Section -->
     <footer>
       <ul class="social">
         <li>
@@ -347,9 +289,6 @@
         </li>
       </ul>
       <div class="credit">&copy; 2021. Built by Joseph Gattuso</div>
-      <span title="Go to top" id="myBtn">
-        <a href="#top" aria-label="Top of Page">&uarr; Back to Top</a>
-      </span>
     </footer>
     <script src="./script.js"></script>
   </body>
