@@ -13,6 +13,12 @@ body {
 
 /* --- Layout ------------------------------ */
 
+section {
+  margin: 2rem auto;
+  width: 100vw;
+  max-width: 1170px;
+}
+
 .banner {
   height: 320px;
   width: 100%;
@@ -24,13 +30,6 @@ body {
   object-position: center center;
   padding: 0;
   width: 100%;
-}
-
-.section {
-  margin: 0 auto;
-  margin-top: 2rem;
-  width: 100vw;
-  max-width: 1170px;
 }
 
 .title {
