@@ -277,24 +277,7 @@ for (let i = 0; i < projects.length; i++) {
   const { name, description, tryItUrl, repo } = projects[i];
   const projectData = `
     <figure class="slide ${i == 0 ? 'show' : ''}">
-    <a href="${tryItUrl}" target="_blank" rel="noopener noreferrer">
-      <picture>
-        <source
-          type="image/webp"
-          srcset="
-            https://github.com/josephgattuso/js-projects/raw/master/${name
-              .replace(/\s+/g, '-')
-              .toLowerCase()}/cover.webp
-          "
-        />
-        <source
-          type="image/webp"
-          srcset="
-          https://github.com/josephgattuso/js-projects/raw/master/${name
-            .replace(/\s+/g, '-')
-            .toLowerCase()}/cover.webp
-        "
-        />
+      <a href="${tryItUrl}" target="_blank" rel="noopener noreferrer">
         <img
           class="img"
           src="https://github.com/josephgattuso/js-projects/raw/master/${name
@@ -305,19 +288,18 @@ for (let i = 0; i < projects.length; i++) {
           width="720"
           height="320"
           />
-      </picture>
       </a>
-    <figcaption>
-      <h3>${name}</h3>
-      <p>${description}</p>
-      <a href="${repo}" target="_blank" rel="noopener noreferrer">
-        View Source
-      </a>
-      <a href="${tryItUrl}" target="_blank" rel="noopener noreferrer">
-        Live Demo
-      </a>
-    </figcaption>
-  </figure>
+      <figcaption>
+        <h3>${name}</h3>
+        <p>${description}</p>
+        <a href="${repo}" target="_blank" rel="noopener noreferrer">
+          View Source
+        </a>
+        <a href="${tryItUrl}" target="_blank" rel="noopener noreferrer">
+          Live Demo
+        </a>
+      </figcaption>
+    </figure>
   `;
   slider.innerHTML += projectData;
 }
@@ -362,3 +344,48 @@ const changeSlide = clicked => {
   //adds css class to show current slide
   slides[currentSlide].className = 'slide show';
 };
+
+const menuBars = document.getElementById('menu-bars');
+const overlay = document.getElementById('overlay');
+const nav1 = document.getElementById('nav-1');
+const nav2 = document.getElementById('nav-2');
+const nav3 = document.getElementById('nav-3');
+const nav4 = document.getElementById('nav-4');
+const nav5 = document.getElementById('nav-5');
+const navItems = [nav1, nav2, nav3, nav4, nav5];
+
+// Control Navigation Animation
+
+function navAnimation(direction1, direction2) {
+  navItems.forEach((nav, i) => {
+    nav.classList.replace(
+      `slide-${direction1}-${i + 1}`,
+      `slide-${direction2}-${i + 1}`
+    );
+  });
+}
+
+function toggleNav() {
+  // Toggle: Menu Bars Open/Closed
+  menuBars.classList.toggle('change');
+  // Toggle: Menu Active
+  overlay.classList.toggle('overlay-active');
+  if (overlay.classList.contains('overlay-active')) {
+    // Animate In - Overlay
+    overlay.classList.replace('overlay-slide-left', 'overlay-slide-right');
+    // Animate In - Nav Items
+    navAnimation('out', 'in');
+  } else {
+    // Animate Out - Overlauy
+    overlay.classList.replace('overlay-slide-right', 'overlay-slide-left');
+    // Animate Out - Nav Items
+    navAnimation('in', 'out');
+  }
+}
+
+// Event Listeners
+
+menuBars.addEventListener('click', toggleNav);
+navItems.forEach(nav => {
+  nav.addEventListener('click', toggleNav);
+});
