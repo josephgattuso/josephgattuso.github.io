@@ -62,7 +62,7 @@
 - [x] Links to your public freeCodeCamp profile
 - [x] Links to your Codewars profile
 - [x] Links back to the GitHub repository that contains the code for your site
-- [ ] Tells us about why you are applying for the programme
+- [x] Tells us about why you are applying for the programme
 
 ## 📐 Technical criteria
 
