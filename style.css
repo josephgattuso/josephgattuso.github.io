@@ -237,6 +237,80 @@ nav li:nth-of-type(5) {
   }
 }
 
+/* --- Theme Toggle ------------------------------ */
+
+.theme-toggle {
+  cursor: pointer;
+  display: flex;
+  font-size: 1.3rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 5rem;
+  top: 1.3rem;
+  z-index: 10;
+}
+
+/* The switch */
+.switch {
+  display: inline-block;
+  height: 34px;
+  margin: 0 0.5rem 0 0.5rem;
+  position: relative;
+  width: 60px;
+}
+
+.switch input {
+  height: 0;
+  opacity: 0;
+  width: 0;
+}
+
+/* The toggle */
+.toggle {
+  background: var(--chrome-3);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.toggle:before {
+  background: var(--chrome-1);
+  bottom: 4px;
+  content: '';
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .toggle {
+  background: var(--blue-3);
+}
+
+input:focus + .toggle {
+  box-shadow: 0 0 1px var(--blue-3);
+}
+
+input:checked + .toggle:before {
+  transform: translateX(26px);
+}
+
+/* Rounded toggles */
+.toggle.round {
+  border-radius: 34px;
+}
+
+.toggle.round:before {
+  border-radius: 50%;
+}
+
 /* --- Menu Bars ------------------------------------ */
 
 .logo {
