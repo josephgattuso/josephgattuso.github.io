@@ -1,12 +1,38 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
 
 :root {
-  --primaryColor: #fff;
-  --navColor1: #21292c;
-  --navColor2: tomato;
-  --navColor3: orange;
-  --navColor4: #234367;
-  --navColor5: #2c8437;
+  --background: #fff;
+  --foreground: #000;
+  /* chrome */
+  --chrome-1: #fafafa;
+  --chrome-2: #eaeaea;
+  --chrome-3: #999;
+  --chrome-4: #888;
+  --chrome-5: #666;
+  --chrome-6: #444;
+  --chrome-7: #333;
+  --chrome-8: #111;
+  /* blue */
+  --blue-1: #d3e5ff;
+  --blue-2: #3291ff;
+  --blue-3: #0070f3;
+  --blue-4: #0761d1;
+  /* cyan */
+  --cyan-1: #aaffec;
+  --cyan-2: #79ffe1;
+  --cyan-3: #50e3c2;
+  --cyan-4: #29bc9b;
+  /* pink */
+  --pink-1: #f81ce5;
+  --pink-2: #eb367f;
+  --pink-3: #ff0080;
+
+  /* nav */
+  --navColor1: var(--chrome-1);
+  --navColor2: var(--chrome-2);
+  --navColor3: var(--chrome-3);
+  --navColor4: var(--chrome-4);
+  --navColor5: var(--chrome-5);
 }
 
 html {
@@ -15,7 +41,9 @@ html {
 }
 
 body {
-  font-family: Nunito, sans-serif;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'IBM Plex Sans', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -47,6 +75,10 @@ section {
   text-transform: uppercase;
 }
 
+a {
+  color: var(--blue-3);
+}
+
 /* --- Navigation Menu ------------------------------ */
 
 /* Overlay */
@@ -57,7 +89,7 @@ section {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.7);
   transform: translateX(-100vw);
 }
 
@@ -94,23 +126,25 @@ nav ul li {
 nav li a {
   position: relative;
   top: 45%;
-  color: #fff;
+  color: var(--foreground);
   text-transform: uppercase;
   letter-spacing: 4px;
   text-decoration: none;
   display: block;
   text-align: center;
+  font-size: 1.5rem;
 }
 
 nav li a:hover {
   transform: scale(1.2);
+  color: var(--pink-3);
 }
 
 nav li a::before {
   content: '';
   width: 25vw;
   height: 3px;
-  background-color: #fff;
+  background: var(--pink-3);
   position: absolute;
   top: 47.5%;
   left: 0;
@@ -122,23 +156,23 @@ nav li a:hover::before {
 }
 
 nav li:nth-of-type(1) {
-  background-color: var(--navColor1);
+  background: var(--navColor1);
 }
 
 nav li:nth-of-type(2) {
-  background-color: var(--navColor2);
+  background: var(--navColor2);
 }
 
 nav li:nth-of-type(3) {
-  background-color: var(--navColor3);
+  background: var(--navColor3);
 }
 
 nav li:nth-of-type(4) {
-  background-color: var(--navColor4);
+  background: var(--navColor4);
 }
 
 nav li:nth-of-type(5) {
-  background-color: var(--navColor5);
+  background: var(--navColor5);
 }
 
 /* Slide in animation with delay for each */
@@ -227,7 +261,7 @@ nav li:nth-of-type(5) {
 .bar3 {
   width: 35px;
   height: 3px;
-  background-color: #000;
+  background: #000;
   margin: 8px 0;
   transition: 0.4s;
 }
@@ -250,8 +284,6 @@ nav li:nth-of-type(5) {
 /* --- Hero Section ------------------------------ */
 
 .cover {
-  background-image: url('images/jj-ying.webp');
-  background-position: center;
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -276,10 +308,16 @@ nav li:nth-of-type(5) {
   font-weight: normal;
 }
 
+/* --- About Section ------------------------------ */
+.about-section {
+  max-width: 1170px;
+  padding-top: 20px;
+}
+
 /* --- Projects Section ------------------------------ */
 
 .feature-project {
-  background: #eaeaea;
+  background: var(--chrome-2);
   max-width: 1170px;
   padding-top: 20px;
 }
@@ -355,12 +393,11 @@ nav li:nth-of-type(5) {
 /* --- Contact Form ------------------------------ */
 
 .contact-form {
-  border-radius: 5px;
-  background: #eaeaea;
+  background: var(--chrome-2);
+  max-width: 1170px;
+  margin: 20px 0 100px 0;
   padding: 20px;
-  max-width: 800px;
-  margin: 0;
-  margin-bottom: 100px;
+  max-width: 1170px;
 }
 
 .col-25 {
@@ -399,6 +436,7 @@ nav li:nth-of-type(5) {
 }
 
 .submit {
+  margin: 15px 20px 0 0;
   float: right;
   font-size: 1rem;
   padding: 0.5rem 1rem;
