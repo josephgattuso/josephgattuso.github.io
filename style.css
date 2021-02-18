@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
 
 :root {
-  --background: #fff;
-  --foreground: #000;
+  --white: #fff;
+  --black: #000;
   /* chrome */
   --chrome-1: #fafafa;
   --chrome-2: #eaeaea;
@@ -11,7 +11,8 @@
   --chrome-5: #666;
   --chrome-6: #444;
   --chrome-7: #333;
-  --chrome-8: #111;
+  --chrome-8: #212121;
+  --chrome-9: #111;
   /* blue */
   --blue-1: #d3e5ff;
   --blue-2: #3291ff;
@@ -35,6 +36,24 @@
   --navColor5: var(--chrome-5);
 }
 
+/* --- Theme ------------------------------ */
+
+.theme-light {
+  --color-primary: var(--blue-3);
+  --background: var(--white);
+  --container: var(--chrome-3);
+  --color-accent: var(--pink-3);
+  --font-color: var(--black);
+}
+
+.theme-dark {
+  --color-primary: var(--cyan-3);
+  --background: var(--chrome-8);
+  --container: var(--chrome-4);
+  --color-accent: var(--blue-2);
+  --font-color: var(--white);
+}
+
 html {
   box-sizing: border-box;
   overflow-x: hidden;
@@ -42,7 +61,7 @@ html {
 
 body {
   background: var(--background);
-  color: var(--foreground);
+  color: var(--font-color);
   font-family: 'IBM Plex Sans', sans-serif;
   margin: 0;
   padding: 0;
@@ -391,7 +410,7 @@ input:checked + .toggle:before {
 /* --- Projects Section ------------------------------ */
 
 .feature-project {
-  background: var(--chrome-2);
+  background: var(--container);
   max-width: 1170px;
   padding-top: 20px;
 }
@@ -404,9 +423,8 @@ input:checked + .toggle:before {
 }
 
 .slider {
-  background: #eaeaea;
+  background: var(--container);
   border-radius: 4px;
-  border: 0.1ch solid var(--background-tertiary);
   height: 620px;
   margin: 2ch 0;
   overflow: hidden;
@@ -467,7 +485,7 @@ input:checked + .toggle:before {
 /* --- Contact Form ------------------------------ */
 
 .contact-form {
-  background: var(--chrome-2);
+  background: var(--container);
   max-width: 1170px;
   margin: 20px 0 100px 0;
   padding: 20px;
