@@ -1,14 +1,14 @@
 <h1 align="center">
-    <img src='images/logo.png' width='48'/>
-    <br/>
-    <a
-      href="https://josephgattuso.github.io/josephgattuso.github.io"
-      target="_blank"
-      rel="noopener noreferrer nofollow"
-    >
-      MySite
-    </a>
-  </h1>
+  <img src='images/logo.png' width='48'/>
+  <br/>
+  <a
+    href="https://josephgattuso.github.io/josephgattuso.github.io"
+    target="_blank"
+    rel="noopener noreferrer nofollow"
+  >
+    MySite
+  </a>
+</h1>
 
 <p align='center'>
   <em>
