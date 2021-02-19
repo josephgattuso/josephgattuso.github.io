@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap");
 
 :root {
   --white: #fff;
@@ -62,12 +62,24 @@ html {
 body {
   background: var(--background);
   color: var(--font-color);
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   margin: 0;
   padding: 0;
 }
 
 /* --- Layout ------------------------------ */
+
+article {
+  background: var(--background);
+  color: var(--font-color);
+}
+
+pre {
+  background: var(--font-color);
+  color: var(--background);
+  border-radius: 5px;
+  padding: 16px;
+}
 
 section {
   margin: 2rem auto;
@@ -160,7 +172,7 @@ nav li a:hover {
 }
 
 nav li a::before {
-  content: '';
+  content: "";
   width: 25vw;
   height: 3px;
   background: var(--pink-3);
@@ -301,7 +313,7 @@ nav li:nth-of-type(5) {
 .toggle:before {
   background: var(--chrome-1);
   bottom: 4px;
-  content: '';
+  content: "";
   height: 26px;
   left: 4px;
   position: absolute;
@@ -469,6 +481,7 @@ input:checked + .toggle:before {
 
 .btn {
   background: #000;
+  border-radius: 0.3rem;
   color: #fff;
   cursor: pointer;
   border: none;
@@ -505,7 +518,7 @@ input:checked + .toggle:before {
 }
 
 .row:after {
-  content: '';
+  content: "";
   display: table;
   clear: both;
 }
@@ -514,7 +527,7 @@ input:checked + .toggle:before {
   background: #fff;
   color: #444;
   border: 1px solid #ccc;
-  font-family: 'Open Sans', -apple-system, system-ui, sans-serif;
+  font-family: "Open Sans", -apple-system, system-ui, sans-serif;
   font-size: 0.875rem;
   padding: 12px;
   resize: vertical;
@@ -564,11 +577,14 @@ footer a {
   footer {
     display: none;
   }
-  input[type='submit'],
   .col-25,
   .col-75 {
     margin-top: 0;
     width: 100%;
+  }
+  input[type="submit"] {
+    width: 100%;
+    float: none;
   }
   .banner,
   .section-center {
