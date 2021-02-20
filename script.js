@@ -425,12 +425,19 @@ toggleSwitch.addEventListener('change', switchTheme);
 
 // Check Local Storage For Theme
 const currentTheme = localStorage.getItem('theme');
-
 if (currentTheme) {
   document.documentElement.setAttribute('data-theme', currentTheme);
-
   if (currentTheme === 'dark') {
     toggleSwitch.checked = true;
     darkMode();
   }
+}
+
+const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+if (prefersDarkScheme.matches) {
+  document.documentElement.setAttribute('data-theme', 'dark');
+  toggleSwitch.checked = true;
+} else {
+  document.documentElement.removeAttribute('data-theme', 'dark');
+  toggleSwitch.checked = false;
 }
