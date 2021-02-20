@@ -1,4 +1,4 @@
-// Projects Section
+// Projects Data
 
 const projects = [
   {
@@ -345,6 +345,8 @@ const changeSlide = clicked => {
   slides[currentSlide].className = 'slide show';
 };
 
+// Animated Nav
+
 const menuBars = document.getElementById('menu-bars');
 const overlay = document.getElementById('overlay');
 const nav1 = document.getElementById('nav-1');
@@ -384,36 +386,51 @@ function toggleNav() {
 }
 
 // Event Listeners
-
 menuBars.addEventListener('click', toggleNav);
-navItems.forEach(nav => {
-  nav.addEventListener('click', toggleNav);
-});
+// navItems.forEach(nav => {
+//   nav.addEventListener('click', toggleNav);
+// });
 
-// Nav section
+// Theme Toggle
+const toggleSwitch = document.querySelector('input[type="checkbox"]');
+const toggleIcon = document.getElementById('toggle-icon');
 
-// Set a given theme/color-scheme
-function setTheme(themeName) {
-  localStorage.setItem('theme', themeName);
-  document.documentElement.className = themeName;
+// Dark Mode Styles
+function darkMode() {
+  // toggleIcon.children[0].textContent = 'Dark Theme';
+  toggleIcon.children[1].classList.replace('fa-sun', 'fa-moon');
 }
 
-// Toggle between light and dark theme
-function toggleTheme() {
-  if (localStorage.getItem('theme') === 'theme-dark') {
-    setTheme('theme-light');
+// Light Mode Styles
+function lightMode() {
+  // toggleIcon.children[0].textContent = 'Light Theme';
+  toggleIcon.children[1].classList.replace('fa-moon', 'fa-sun');
+}
+
+// Switch Theme Dynamically
+function switchTheme(event) {
+  if (event.target.checked) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
+    darkMode();
   } else {
-    setTheme('theme-dark');
+    document.documentElement.setAttribute('data-theme', 'light');
+    localStorage.setItem('theme', 'light');
+    lightMode();
   }
 }
 
-// Set theme on initial load
-(function () {
-  if (localStorage.getItem('theme') === 'theme-dark') {
-    setTheme('theme-dark');
-    document.getElementById('slider').checked = false;
-  } else {
-    setTheme('theme-light');
-    document.getElementById('slider').checked = true;
+// Event Listener
+toggleSwitch.addEventListener('change', switchTheme);
+
+// Check Local Storage For Theme
+const currentTheme = localStorage.getItem('theme');
+
+if (currentTheme) {
+  document.documentElement.setAttribute('data-theme', currentTheme);
+
+  if (currentTheme === 'dark') {
+    toggleSwitch.checked = true;
+    darkMode();
   }
-})();
+}
