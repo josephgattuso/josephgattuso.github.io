@@ -573,11 +573,11 @@ input:checked + .switch::before {
 }
 
 .bg-img.two {
-  background-image: url('https://cdn-images-1.medium.com/max/1600/1*AsY7dn8OZawwh8HqtWHO5Q.jpeg');
+  background-image: url('https://placehold.co/600x400');
 }
 
 .bg-img.three {
-  background-image: url('https://cdn-images-1.medium.com/max/1600/1*AsY7dn8OZawwh8HqtWHO5Q.jpeg');
+  background-image: url('https://placehold.co/600x400');
 }
 
 .content {
@@ -690,6 +690,9 @@ footer a {
   .slide img {
     max-height: 220px;
     width: 100%;
+  }
+  .bg-img {
+    min-height: 250px;
   }
 }
 
