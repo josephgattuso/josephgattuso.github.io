@@ -118,14 +118,6 @@ section {
   width: 100%;
 }
 
-.img {
-  height: 430px;
-  margin: 0;
-  object-position: center center;
-  padding: 0;
-  width: 100%;
-}
-
 /* Typography */
 
 h1,
@@ -503,11 +495,15 @@ input:checked + .switch::before {
   z-index: 2;
 }
 
-.img {
-  height: 320px;
+.slide img {
+  margin: 0;
+  padding: 0;
   width: 100%;
   max-width: 720px;
-  object-fit: cover;
+}
+
+.slide a {
+  color: var(--tertiaryColor);
 }
 
 /* --- Buttons ------------------------------ */
@@ -691,9 +687,8 @@ footer a {
   .banner {
     height: 280px;
   }
-  .feature-project {
-    margin: 0;
-    padding: 10px 0;
+  .slide img {
+    max-height: 220px;
     width: 100%;
   }
 }

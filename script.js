@@ -279,7 +279,7 @@ for (let i = 0; i < projects.length; i++) {
     <figure class="slide ${i == 0 ? 'show' : ''}">
       <a href="${tryItUrl}" target="_blank" rel="noopener noreferrer">
         <img
-          class="img"
+          class="slide-img"
           src="https://github.com/josephgattuso/js-projects/raw/master/${name
             .replace(/\s+/g, '-')
             .toLowerCase()}/cover.webp"
