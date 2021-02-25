@@ -14,13 +14,13 @@
   --chrome-8: #121212;
   --chrome-9: #111;
   /* blue */
-  --blue-1: #d3e5ff;
-  --blue-2: #3291ff;
+  --blue-1: #4fb8ff;
+  --blue-2: #62bbee;
   --blue-3: #0070f3;
   --blue-4: #0761d1;
   /* cyan */
-  --cyan-1: #82d8d8;
-  --cyan-2: #79ffe1;
+  --cyan-1: #a3faef;
+  --cyan-2: #00cdb3;
   --cyan-3: #00ffe5;
   --cyan-4: #29bc9b;
   /* pink */
@@ -36,9 +36,10 @@
   --bgColor: var(--white);
   --bgContainer: var(--chrome-2);
   --boxShadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
-  --primaryColor: var(--cyan-4);
+  --primaryColor: var(--cyan-2);
   --primaryColorAlt: #ff2d2d;
-  --secondaryColor: #009696;
+  --secondaryColor: var(--pink-3);
+  --tertiaryColor: var(--blue-3);
   --textColor: var(--chrome-9);
   --textColorAlt: var(--chrome-5);
   /* Nav */
@@ -57,7 +58,8 @@
   --bgContainer: var(--chrome-6);
   --primaryColor: var(--cyan-1);
   --primaryColorAlt: #6c63ff;
-  --secondaryColor: #03dac5;
+  --secondaryColor: var(--pink-1);
+  --tertiaryColor: var(--blue-2);
   --textColor: rgba(255, 255, 255, 0.9);
   --textColorAlt: rgba(255, 255, 255, 0.7);
   /* Nav */
@@ -80,7 +82,7 @@
 
 html {
   box-sizing: border-box;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -105,8 +107,8 @@ pre {
 }
 
 section {
-  margin: 2rem auto;
-  min-height: 100vh;
+  margin: 5rem auto;
+  min-height: 80vh;
   width: 100vw;
   max-width: 1170px;
 }
@@ -532,6 +534,60 @@ input:checked + .switch::before {
   outline: none;
 }
 
+/* --- Articles ------------------------------ */
+
+.grid-container {
+  display: grid;
+  grid-gap: 10px;
+  margin: 0 20px;
+  max-width: 1170px;
+}
+
+/* no grid support? */
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid-container {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: minmax(150px, auto);
+}
+
+.card {
+  background: var(--bgContainer);
+  color: var(--textColor);
+  border: 1px solid var(--bgContainer);
+  /* needed for the flex layout*/
+  margin-left: 5px;
+  margin-right: 5px;
+  flex: 1 1 200px;
+}
+
+.bg-img {
+  background-size: cover;
+  background-position: center;
+  min-height: 200px;
+}
+
+.bg-img.one {
+  background: var(--primaryColor);
+}
+
+.bg-img.two {
+  background: var(--secondaryColor);
+}
+
+.bg-img.three {
+  background: var(--tertiaryColor);
+}
+
+.content {
+  padding: 15px;
+}
+
 /* --- Contact Form ------------------------------ */
 .contact-form {
   background: var(--bgContainer);
@@ -639,5 +695,11 @@ footer a {
     margin: 0;
     padding: 10px 0;
     width: 100%;
+  }
+}
+
+@supports (display: grid) {
+  .grid-container > * {
+    margin: 0;
   }
 }
