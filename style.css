@@ -573,15 +573,15 @@ input:checked + .switch::before {
 }
 
 .bg-img.one {
-  background: var(--primaryColor);
+  background-image: url('https://cdn-images-1.medium.com/max/1600/1*AsY7dn8OZawwh8HqtWHO5Q.jpeg');
 }
 
 .bg-img.two {
-  background: var(--secondaryColor);
+  background-image: url('https://cdn-images-1.medium.com/max/1600/1*AsY7dn8OZawwh8HqtWHO5Q.jpeg');
 }
 
 .bg-img.three {
-  background: var(--tertiaryColor);
+  background-image: url('https://cdn-images-1.medium.com/max/1600/1*AsY7dn8OZawwh8HqtWHO5Q.jpeg');
 }
 
 .content {
