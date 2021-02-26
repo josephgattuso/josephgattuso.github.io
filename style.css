@@ -505,6 +505,57 @@ input:checked + .switch::before {
 .slide a {
   color: var(--tertiaryColor);
 }
+#projects .bg-img.one {
+  background-image: url('https://github.com/josephgattuso/js-projects/raw/master/calculator/cover.webp');
+}
+
+#projects .bg-img.two {
+  background-image: url('https://github.com/josephgattuso/js-projects/raw/master/joke-teller/cover.webp');
+}
+
+#projects .bg-img.three {
+  background-image: url('https://github.com/josephgattuso/js-projects/raw/master/quotes-generator/cover.webp');
+}
+
+#projects .bg-img.four {
+  background-image: url('https://github.com/josephgattuso/js-projects/raw/master/notes-app/cover.webp');
+}
+
+#projects .bg-img.five {
+  background-image: url('https://github.com/josephgattuso/js-projects/raw/master/password-generator/cover.webp');
+}
+
+#projects .bg-img.six {
+  background-image: url('https://github.com/josephgattuso/js-projects/raw/master/drink-water/cover.webp');
+}
+
+#projects .bg-img.seven {
+  background-image: url('https://github.com/josephgattuso/js-projects/raw/master/drawing-app/cover.webp');
+}
+
+#projects .bg-img.eight {
+  background-image: url('https://github.com/josephgattuso/js-projects/raw/master/movie-app/cover.webp');
+}
+
+#projects .bg-img.nine {
+  background-image: url('https://github.com/josephgattuso/js-projects/raw/master/random-choice-picker/cover.webp');
+}
+
+#projects .bg-img.ten {
+  background-image: url('https://github.com/josephgattuso/js-projects/raw/master/theme-clock/cover.webp');
+}
+
+#projects .bg-img.eleven {
+  background-image: url('https://github.com/josephgattuso/js-projects/raw/master/sound-board/cover.webp');
+}
+
+#projects .bg-img.twelve {
+  background-image: url('https://github.com/josephgattuso/js-projects/raw/master/3d-boxes-background/cover.webp');
+}
+
+.button:not(:first-of-type) {
+  margin-left: 20px;
+}
 
 /* --- Buttons ------------------------------ */
 
