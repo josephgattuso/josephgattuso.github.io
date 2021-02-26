@@ -37,6 +37,7 @@
   --bgContainer: var(--chrome-2);
   --bgClear: rgba(0, 0, 0, 0.2);
   --boxShadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
+  --dataTheme: light;
   --primaryColor: var(--cyan-2);
   --primaryColorAlt: #ff2d2d;
   --secondaryColor: var(--pink-3);
@@ -58,6 +59,7 @@
   --bgColor: var(--chrome-8);
   --bgContainer: var(--chrome-6);
   --bgClear: rgba(0, 0, 0, 0.7);
+  --dataTheme: dark;
   --primaryColor: var(--cyan-1);
   --primaryColorAlt: #6c63ff;
   --secondaryColor: var(--pink-1);
@@ -568,6 +570,16 @@ input:checked + .switch::before {
   margin-left: 20px;
 }
 
+.codepen {
+  height: 380px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid;
+  margin: 1em 0;
+  padding: 1em;
+}
 /* --- Buttons ------------------------------ */
 
 .buttons-container {
@@ -610,14 +622,14 @@ input:checked + .switch::before {
 .grid-container {
   display: grid;
   margin: 0 auto;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   grid-auto-rows: minmax(150px, auto);
 }
 
 .card {
   background: var(--bgContainer);
-  color: var(--textColor);
   border: 1px solid var(--bgContainer);
+  color: var(--textColor);
   /* needed for the flex layout*/
   margin-left: 5px;
   margin-right: 5px;
@@ -753,8 +765,8 @@ footer a {
     max-height: 220px;
     width: 100%;
   }
-  .bg-img {
-    min-height: 250px;
+  .card .bg-img {
+    height: 280px;
   }
 }
 
