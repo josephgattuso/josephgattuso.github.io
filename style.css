@@ -35,6 +35,7 @@
 :root {
   --bgColor: var(--white);
   --bgContainer: var(--chrome-2);
+  --bgClear: rgba(0, 0, 0, 0.2);
   --boxShadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
   --primaryColor: var(--cyan-2);
   --primaryColorAlt: #ff2d2d;
@@ -56,6 +57,7 @@
 [data-theme='dark'] {
   --bgColor: var(--chrome-8);
   --bgContainer: var(--chrome-6);
+  --bgClear: rgba(0, 0, 0, 0.7);
   --primaryColor: var(--cyan-1);
   --primaryColorAlt: #6c63ff;
   --secondaryColor: var(--pink-1);
@@ -146,6 +148,15 @@ a {
 }
 
 /* --- Navigation Menu ------------------------------ */
+
+/* Navbar */
+.navbar {
+  background: var(--bgClear);
+  border: 1px solid var(--bgClear);
+  height: 70px;
+  top: 0;
+  position: sticky;
+}
 
 /* Overlay */
 .overlay {
