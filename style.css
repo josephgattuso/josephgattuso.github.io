@@ -566,6 +566,10 @@ input:checked + .switch::before {
   background-image: url('https://github.com/josephgattuso/js-projects/raw/master/3d-boxes-background/cover.webp');
 }
 
+#projects .bg-img.thirteen {
+  background-image: url('https://github.com/josephgattuso/js-projects-v2/raw/master/pong/cover.jpg');
+}
+
 .button:not(:first-of-type) {
   margin-left: 20px;
 }
@@ -580,6 +584,7 @@ input:checked + .switch::before {
   margin: 1em 0;
   padding: 1em;
 }
+
 /* --- Buttons ------------------------------ */
 
 .buttons-container {
