@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&family=IBM+Plex+Mono:wght@400;700&display=swap');
 
+/* --- Color Palettes ------------------------------ */
+
 :root {
   --white: #fff;
   --black: #000;
@@ -11,8 +13,8 @@
   --chrome-5: #666;
   --chrome-6: #444;
   --chrome-7: #333;
-  --chrome-8: #121212;
-  --chrome-9: #111;
+  --chrome-8: #1a1a1a;
+  --chrome-9: #222;
   /* blue */
   --blue-1: #4fb8ff;
   --blue-2: #62bbee;
@@ -44,6 +46,7 @@
   --tertiaryColor: var(--blue-3);
   --textColor: var(--chrome-9);
   --textColorAlt: var(--chrome-5);
+  --textHead: var(--black);
   /* Nav */
   --navColor1: var(--chrome-2);
   --navColor2: var(--chrome-3);
@@ -57,15 +60,16 @@
 
 [data-theme='dark'] {
   --bgColor: var(--chrome-8);
-  --bgContainer: var(--chrome-6);
+  --bgContainer: var(--chrome-7);
   --bgClear: rgba(0, 0, 0, 0.7);
   --dataTheme: dark;
   --primaryColor: var(--cyan-1);
   --primaryColorAlt: #6c63ff;
   --secondaryColor: var(--pink-1);
   --tertiaryColor: var(--blue-2);
-  --textColor: rgba(255, 255, 255, 0.9);
-  --textColorAlt: rgba(255, 255, 255, 0.7);
+  --textColor: #7e7e7e;
+  --textColorAlt: #ffffffb3;
+  --textHead: var(--white);
   /* Nav */
   --navColor1: var(--chrome-8);
   --navColor2: var(--chrome-7);
@@ -98,18 +102,6 @@ body {
   padding: 0;
 }
 
-article {
-  background: var(--background);
-  color: var(--font-color);
-}
-
-pre {
-  background: var(--font-color);
-  color: var(--background);
-  border-radius: 5px;
-  padding: 16px;
-}
-
 section {
   margin: 5rem auto;
   min-height: 80vh;
@@ -123,7 +115,6 @@ section {
 }
 
 /* Typography */
-
 h1,
 h2,
 h3,
@@ -131,27 +122,27 @@ h4,
 h5,
 h6,
 .title {
-  color: var(--textColorAlt);
+  color: var(--textHead);
   font-family: var(--headingFont);
   font-weight: 400;
-}
-
-h1 {
-  color: var(--textColor);
-}
-
-.title {
-  text-align: center;
-  text-transform: uppercase;
 }
 
 a {
   color: var(--blue-3);
 }
 
+.link:not(:first-of-type) {
+  margin-left: 20px;
+}
+
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
 /* --- Navigation Menu ------------------------------ */
 
-/* Navbar */
 .navbar {
   background: var(--bgClear);
   border: 1px solid var(--bgClear);
@@ -160,7 +151,6 @@ a {
   position: sticky;
 }
 
-/* Overlay */
 .overlay {
   position: fixed;
   z-index: 9;
@@ -255,6 +245,7 @@ nav li:nth-of-type(5) {
 }
 
 /* Slide in animation with delay for each */
+
 .slide-in-1 {
   animation: slide-in 0.4s linear 0.2s both;
 }
@@ -568,10 +559,6 @@ input:checked + .switch::before {
 
 #projects .bg-img.thirteen {
   background-image: url('https://github.com/josephgattuso/js-projects-v2/raw/master/pong/cover.jpg');
-}
-
-.button:not(:first-of-type) {
-  margin-left: 20px;
 }
 
 .codepen {
