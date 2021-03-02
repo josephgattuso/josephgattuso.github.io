@@ -394,12 +394,19 @@ navItems.forEach(nav => {
 
 let darkMode = localStorage.getItem('darkMode');
 const darkModeToggle = document.querySelector('#dark-mode-toggle');
+const aboutImg = document.getElementById('about-img');
+
+function imageMode(color) {
+  aboutImg.src = `images/about_${color}.webp`;
+}
 
 const enableDarkMode = () => {
   // 1. Add the class to the body
   document.body.classList.add('darkmode');
   // 2. Update darkMode in localStorage
   localStorage.setItem('darkMode', 'enabled');
+  // 3. Update About section image
+  imageMode('dark');
 };
 
 const disableDarkMode = () => {
@@ -407,6 +414,8 @@ const disableDarkMode = () => {
   document.body.classList.remove('darkmode');
   // 2. Update darkMode in localStorage
   localStorage.setItem('darkMode', null);
+  // 3. Update About section image
+  imageMode('light');
 };
 
 // If the user already visited and enabled darkMode

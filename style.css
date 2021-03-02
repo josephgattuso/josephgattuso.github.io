@@ -133,11 +133,6 @@ section {
   max-width: 1170px;
 }
 
-.banner {
-  height: 320px;
-  width: 100%;
-}
-
 /* Typography */
 h1,
 h2,
@@ -422,12 +417,10 @@ nav li:nth-of-type(5) {
   padding-top: 20px;
 }
 
-.about-section .banner {
-  background-image: url('images/nightcoder.gif');
-  background-repeat: no-repeat;
-  background-position: center;
+.banner {
   background-size: cover;
-  min-height: 400px;
+  max-height: 400px;
+  width: 100%;
 }
 
 /* --- Projects Section ------------------------------ */
@@ -715,7 +708,7 @@ footer a {
     width: 100vw;
   }
   .banner {
-    height: 280px;
+    max-height: 280px;
   }
   .slide img {
     max-height: 220px;
