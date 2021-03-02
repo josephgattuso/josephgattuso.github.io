@@ -47,7 +47,7 @@
   --tertiaryColor: var(--blue-3);
   --textColor: var(--chrome-9);
   --textColorAlt: var(--chrome-5);
-  --textHead: var(--black);
+  --textColorHead: var(--black);
   /* Nav */
   --navColor1: var(--chrome-2);
   --navColor2: var(--chrome-3);
@@ -71,7 +71,7 @@
   --tertiaryColor: var(--blue-2);
   --textColor: #7e7e7e;
   --textColorAlt: #ffffffb3;
-  --textHead: var(--white);
+  --textColorHead: var(--white);
   /* Nav */
   --navColor1: var(--chrome-8);
   --navColor2: var(--chrome-7);
@@ -101,7 +101,7 @@
     --tertiaryColor: var(--blue-2);
     --textColor: #7e7e7e;
     --textColorAlt: #ffffffb3;
-    --textHead: var(--white);
+    --textColorHead: var(--white);
     --navColor1: var(--chrome-8);
     --navColor2: var(--chrome-7);
     --navColor3: var(--chrome-6);
@@ -146,7 +146,7 @@ h4,
 h5,
 h6,
 .title {
-  color: var(--textHead);
+  color: var(--textColorHead);
   font-family: var(--headingFont);
   font-weight: 400;
 }
@@ -166,35 +166,6 @@ a {
 }
 
 /* --- Navigation Menu ------------------------------ */
-
-.navbar {
-  background: var(--bgClear);
-  border: 1px solid var(--bgClear);
-  height: 70px;
-  top: 0;
-  position: sticky;
-}
-
-.overlay {
-  position: fixed;
-  z-index: 9;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.7);
-  transform: translateX(-100vw);
-}
-
-.overlay-slide-right {
-  transition: all 0.4s ease-in-out;
-  transform: translateX(0);
-}
-
-.overlay-slide-left {
-  transition: all 0.8s ease-in-out;
-  transform: translateX(-100vw);
-}
 
 /* Nav Menu Items */
 nav,
@@ -268,6 +239,36 @@ nav li:nth-of-type(5) {
   background: var(--navColor5);
 }
 
+.navbar {
+  background: var(--bgClear);
+  border: 1px solid var(--bgClear);
+  height: 70px;
+  top: 0;
+  position: sticky;
+  z-index: 10;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.7);
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transform: translateX(-100vw);
+  width: 100vw;
+  z-index: 10;
+}
+
+.overlay-slide-right {
+  transition: all 0.4s ease-in-out;
+  transform: translateX(0);
+}
+
+.overlay-slide-left {
+  transition: all 0.8s ease-in-out;
+  transform: translateX(-100vw);
+}
+
 /* Slide in animation with delay for each */
 
 .slide-in-1 {
@@ -332,38 +333,40 @@ nav li:nth-of-type(5) {
 
 /* --- Theme Toggle ------------------------------ */
 
-/* Dark Mode Toggle */
-
 .dark-mode-toggle {
   background: transparent;
-  color: var(--textHead);
   border: none;
+  color: var(--textColorHead);
+  display: inline;
   position: fixed;
-  top: 1rem;
   right: 7rem;
+  top: 1rem;
+  z-index: 10;
 }
 
-.dark-mode-toggle .fas {
+.fab,
+.fas {
   font-size: 2rem;
 }
 
 /* --- Menu Bars ------------------------------------ */
 
 .logo {
-  position: fixed;
-  top: 1rem;
-  left: 2rem;
-  display: inline;
   cursor: pointer;
+  display: inline;
+  position: fixed;
+  left: 2rem;
+  top: 1rem;
+  z-index: 10;
 }
 
 .menu-bars {
-  position: fixed;
-  top: 1rem;
-  right: 2rem;
-  z-index: 10;
-  display: inline;
   cursor: pointer;
+  display: inline;
+  position: fixed;
+  right: 2rem;
+  top: 1rem;
+  z-index: 10;
 }
 
 .bar1,
@@ -479,67 +482,56 @@ nav li:nth-of-type(5) {
 .slide a {
   color: var(--tertiaryColor);
 }
-#projects .bg-img.one {
+#projects .card-img.one {
   background-image: url('https://github.com/josephgattuso/js-projects/raw/master/calculator/cover.webp');
 }
 
-#projects .bg-img.two {
+#projects .card-img.two {
   background-image: url('https://github.com/josephgattuso/js-projects/raw/master/joke-teller/cover.webp');
 }
 
-#projects .bg-img.three {
+#projects .card-img.three {
   background-image: url('https://github.com/josephgattuso/js-projects/raw/master/quotes-generator/cover.webp');
 }
 
-#projects .bg-img.four {
+#projects .card-img.four {
   background-image: url('https://github.com/josephgattuso/js-projects/raw/master/notes-app/cover.webp');
 }
 
-#projects .bg-img.five {
+#projects .card-img.five {
   background-image: url('https://github.com/josephgattuso/js-projects/raw/master/password-generator/cover.webp');
 }
 
-#projects .bg-img.six {
+#projects .card-img.six {
   background-image: url('https://github.com/josephgattuso/js-projects/raw/master/drink-water/cover.webp');
 }
 
-#projects .bg-img.seven {
+#projects .card-img.seven {
   background-image: url('https://github.com/josephgattuso/js-projects/raw/master/drawing-app/cover.webp');
 }
 
-#projects .bg-img.eight {
+#projects .card-img.eight {
   background-image: url('https://github.com/josephgattuso/js-projects/raw/master/movie-app/cover.webp');
 }
 
-#projects .bg-img.nine {
+#projects .card-img.nine {
   background-image: url('https://github.com/josephgattuso/js-projects/raw/master/random-choice-picker/cover.webp');
 }
 
-#projects .bg-img.ten {
+#projects .card-img.ten {
   background-image: url('https://github.com/josephgattuso/js-projects/raw/master/theme-clock/cover.webp');
 }
 
-#projects .bg-img.eleven {
+#projects .card-img.eleven {
   background-image: url('https://github.com/josephgattuso/js-projects/raw/master/sound-board/cover.webp');
 }
 
-#projects .bg-img.twelve {
+#projects .card-img.twelve {
   background-image: url('https://github.com/josephgattuso/js-projects/raw/master/3d-boxes-background/cover.webp');
 }
 
-#projects .bg-img.thirteen {
+#projects .card-img.thirteen {
   background-image: url('https://github.com/josephgattuso/js-projects-v2/raw/master/pong/cover.jpg');
-}
-
-.codepen {
-  height: 380px;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid;
-  margin: 1em 0;
-  padding: 1em;
 }
 
 /* --- Buttons ------------------------------ */
@@ -583,41 +575,40 @@ nav li:nth-of-type(5) {
 
 .grid-container {
   display: grid;
-  margin: 0 auto;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   grid-auto-rows: minmax(150px, auto);
+  margin: 0 auto;
 }
 
 .card {
   background: var(--bgContainer);
   border: 1px solid var(--bgContainer);
   color: var(--textColor);
-  /* needed for the flex layout*/
-  margin-left: 5px;
-  margin-right: 5px;
+  margin: 1rem 1rem 1rem 0;
   flex: 1 1 200px;
 }
 
-.bg-img {
+.card-img {
   background-size: cover;
-  background-position: center;
-  min-height: 200px;
+  display: flex;
+  justify-content: flex-end;
+  height: 200px;
 }
 
-.bg-img.one {
+.card-content {
+  padding: 15px;
+}
+
+#articles .card-img.one {
   background-image: url('https://cdn-images-1.medium.com/max/1600/1*AsY7dn8OZawwh8HqtWHO5Q.jpeg');
 }
 
-.bg-img.two {
+#articles .card-img.two {
   background-image: url('https://placehold.co/600x400');
 }
 
-.bg-img.three {
+#articles .card-img.three {
   background-image: url('https://placehold.co/600x400');
-}
-
-.content {
-  padding: 15px;
 }
 
 /* --- Contact Form ------------------------------ */
@@ -683,15 +674,15 @@ footer a {
 }
 
 .social {
+  list-style: none;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  list-style: none;
 }
 
 .social li {
-  padding: 20px;
+  padding: 0 20px 0 20px;
 }
 
 .social .fab,
@@ -727,7 +718,7 @@ footer a {
     max-height: 220px;
     width: 100%;
   }
-  .card .bg-img {
+  .card .card-img {
     height: 280px;
   }
 }
