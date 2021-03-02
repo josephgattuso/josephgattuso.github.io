@@ -507,7 +507,7 @@ nav li:nth-of-type(5) {
 }
 
 #projects .card-img.seven {
-  background-image: url('https://github.com/josephgattuso/js-projects/raw/master/drawing-app/cover.webp');
+  background-image: url('https://github.com/josephgattuso/js-projects-v2/raw/master/paint-clone/cover.webp');
 }
 
 #projects .card-img.eight {
@@ -531,7 +531,7 @@ nav li:nth-of-type(5) {
 }
 
 #projects .card-img.thirteen {
-  background-image: url('https://github.com/josephgattuso/js-projects-v2/raw/master/pong/cover.jpg');
+  background-image: url('https://github.com/josephgattuso/js-projects-v2/raw/master/pong/cover.webp');
 }
 
 /* --- Buttons ------------------------------ */
