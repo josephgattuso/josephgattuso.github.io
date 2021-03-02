@@ -127,7 +127,7 @@ body {
 }
 
 section {
-  margin: 5rem auto;
+  margin: 0 auto;
   min-height: 80vh;
   width: 100vw;
   max-width: 1170px;
@@ -397,7 +397,6 @@ nav li:nth-of-type(5) {
 /* --- Hero Section ------------------------------ */
 
 .cover {
-  border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -405,15 +404,11 @@ nav li:nth-of-type(5) {
   justify-content: center;
   margin-top: 0;
   text-align: center;
+  object-fit: cover;
 }
 
 .cover h1 {
-  font-size: 48px;
-}
-
-.cover img {
-  object-fit: cover;
-  width: 100vw;
+  font-size: 70px;
 }
 
 .cover .subtitle {
@@ -425,6 +420,14 @@ nav li:nth-of-type(5) {
 .about-section {
   max-width: 1170px;
   padding-top: 20px;
+}
+
+.about-section .banner {
+  background-image: url('images/nightcoder.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 400px;
 }
 
 /* --- Projects Section ------------------------------ */
