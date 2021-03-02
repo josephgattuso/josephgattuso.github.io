@@ -133,6 +133,14 @@ section {
   max-width: 1170px;
 }
 
+a {
+  color: var(--blue-3);
+}
+
+.link:not(:first-of-type) {
+  margin-left: 20px;
+}
+
 /* Typography */
 h1,
 h2,
@@ -146,18 +154,14 @@ h6,
   font-weight: 400;
 }
 
-a {
-  color: var(--blue-3);
-}
-
-.link:not(:first-of-type) {
-  margin-left: 20px;
+h1 {
+  font-size: 3rem;
 }
 
 .title {
   text-align: center;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 /* --- Navigation Menu ------------------------------ */
@@ -400,10 +404,6 @@ nav li:nth-of-type(5) {
   margin-top: 0;
   text-align: center;
   object-fit: cover;
-}
-
-.cover h1 {
-  font-size: 70px;
 }
 
 .cover .subtitle {
