@@ -34,6 +34,7 @@
 
 /* --- Theme ------------------------------ */
 
+/* Light Mode */
 :root {
   --bgColor: var(--white);
   --bgContainer: var(--chrome-2);
@@ -58,7 +59,8 @@
   --bodyFont: 'IBM Plex Sans', sans-serif;
 }
 
-[data-theme='dark'] {
+/* Dark Mode */
+.darkmode {
   --bgColor: var(--chrome-8);
   --bgContainer: var(--chrome-7);
   --bgClear: rgba(0, 0, 0, 0.7);
@@ -84,6 +86,28 @@
   --sheetShadow: 0px 0px 22px rgba(0, 0, 0.4) inset, 0px 0px 4px rgba(0, 0, 0, 0.25 inset);
   --sheetTextColor: var(--white);
   */
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bgColor: var(--chrome-8);
+    --bgContainer: var(--chrome-7);
+    --bgClear: rgba(0, 0, 0, 0.7);
+    --dataTheme: dark;
+    --primaryColor: var(--cyan-1);
+    --primaryColorAlt: #6c63ff;
+    --secondaryColor: var(--pink-1);
+    --tertiaryColor: var(--blue-2);
+    --textColor: #7e7e7e;
+    --textColorAlt: #ffffffb3;
+    --textHead: var(--white);
+    --navColor1: var(--chrome-8);
+    --navColor2: var(--chrome-7);
+    --navColor3: var(--chrome-6);
+    --navColor4: var(--chrome-5);
+    --navColor5: var(--chrome-4);
+  }
 }
 
 /* --- Layout ------------------------------ */
@@ -309,72 +333,18 @@ nav li:nth-of-type(5) {
 /* --- Theme Toggle ------------------------------ */
 
 /* Dark Mode Toggle */
-.theme-switch-wrapper {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+.dark-mode-toggle {
+  background: transparent;
+  color: var(--textHead);
+  border: none;
   position: fixed;
   top: 1rem;
   right: 7rem;
-  z-index: 10;
 }
 
-.theme-switch-wrapper span {
-  margin-right: 10px;
-}
-
-.theme-switch {
-  display: inline-block;
-  height: 34px;
-  position: relative;
-  width: 60px;
-}
-
-.theme-switch input {
-  display: none;
-}
-
-#toggle-icon > i {
-  font-size: 1.5rem;
-}
-
-.switch {
-  background: var(--chrome-3);
-  bottom: 0;
-  cursor: pointer;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: 0.4s;
-}
-
-.switch::before {
-  background: #fff;
-  bottom: 4px;
-  content: '';
-  height: 26px;
-  left: 4px;
-  position: absolute;
-  transition: 0.4s;
-  width: 26px;
-}
-
-input:checked + .switch {
-  background: var(--primaryColor);
-}
-
-input:checked + .switch::before {
-  transform: translateX(26px);
-}
-
-.switch.round {
-  border-radius: 34px;
-}
-
-.switch.round::before {
-  border-radius: 50%;
+.dark-mode-toggle .fas {
+  font-size: 2rem;
 }
 
 /* --- Menu Bars ------------------------------------ */

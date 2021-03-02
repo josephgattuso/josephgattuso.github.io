@@ -391,52 +391,40 @@ navItems.forEach(nav => {
 });
 
 // Theme Toggle
-const toggleSwitch = document.querySelector('input[type="checkbox"]');
-const toggleIcon = document.getElementById('toggle-icon');
 
-// Dark Mode Styles
-function darkMode() {
-  // toggleIcon.children[0].textContent = 'Dark Theme';
-  toggleIcon.children[1].classList.replace('fa-sun', 'fa-moon');
+let darkMode = localStorage.getItem('darkMode');
+const darkModeToggle = document.querySelector('#dark-mode-toggle');
+
+const enableDarkMode = () => {
+  // 1. Add the class to the body
+  document.body.classList.add('darkmode');
+  // 2. Update darkMode in localStorage
+  localStorage.setItem('darkMode', 'enabled');
+};
+
+const disableDarkMode = () => {
+  // 1. Remove the class from the body
+  document.body.classList.remove('darkmode');
+  // 2. Update darkMode in localStorage
+  localStorage.setItem('darkMode', null);
+};
+
+// If the user already visited and enabled darkMode
+// start things off with it on
+if (darkMode === 'enabled') {
+  enableDarkMode();
 }
 
-// Light Mode Styles
-function lightMode() {
-  // toggleIcon.children[0].textContent = 'Light Theme';
-  toggleIcon.children[1].classList.replace('fa-moon', 'fa-sun');
-}
+// When someone clicks the button
+darkModeToggle.addEventListener('click', () => {
+  // get their darkMode setting
+  darkMode = localStorage.getItem('darkMode');
 
-// Switch Theme Dynamically
-function switchTheme(event) {
-  if (event.target.checked) {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    localStorage.setItem('theme', 'dark');
-    darkMode();
+  // if it not current enabled, enable it
+  if (darkMode !== 'enabled') {
+    enableDarkMode();
+    // if it has been enabled, turn it off
   } else {
-    document.documentElement.setAttribute('data-theme', 'light');
-    localStorage.setItem('theme', 'light');
-    lightMode();
+    disableDarkMode();
   }
-}
-
-// Event Listener
-toggleSwitch.addEventListener('change', switchTheme);
-
-// Check Local Storage For Theme
-const currentTheme = localStorage.getItem('theme');
-if (currentTheme) {
-  document.documentElement.setAttribute('data-theme', currentTheme);
-  if (currentTheme === 'dark') {
-    toggleSwitch.checked = true;
-    darkMode();
-  }
-}
-
-const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-if (prefersDarkScheme.matches) {
-  document.documentElement.setAttribute('data-theme', 'dark');
-  toggleSwitch.checked = true;
-} else {
-  document.documentElement.removeAttribute('data-theme', 'dark');
-  toggleSwitch.checked = false;
-}
+});
