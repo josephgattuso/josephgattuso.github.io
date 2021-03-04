@@ -425,7 +425,7 @@ nav li:nth-of-type(5) {
 
 /* --- Projects Section ------------------------------ */
 
-.feature-project {
+/* .feature-project {
   background: var(--bgContainer);
   max-width: 1170px;
   padding-top: 20px;
@@ -477,58 +477,7 @@ nav li:nth-of-type(5) {
 
 .slide a {
   color: var(--tertiaryColor);
-}
-#projects .card-img.one {
-  background-image: url('https://github.com/josephgattuso/js-projects/raw/master/calculator/cover.webp');
-}
-
-#projects .card-img.two {
-  background-image: url('https://github.com/josephgattuso/js-projects/raw/master/joke-teller/cover.webp');
-}
-
-#projects .card-img.three {
-  background-image: url('https://github.com/josephgattuso/js-projects/raw/master/quotes-generator/cover.webp');
-}
-
-#projects .card-img.four {
-  background-image: url('https://github.com/josephgattuso/js-projects/raw/master/notes-app/cover.webp');
-}
-
-#projects .card-img.five {
-  background-image: url('https://github.com/josephgattuso/js-projects/raw/master/password-generator/cover.webp');
-}
-
-#projects .card-img.six {
-  background-image: url('https://github.com/josephgattuso/js-projects/raw/master/drink-water/cover.webp');
-}
-
-#projects .card-img.seven {
-  background-image: url('https://github.com/josephgattuso/js-projects-v2/raw/master/paint-clone/cover.webp');
-}
-
-#projects .card-img.eight {
-  background-image: url('https://github.com/josephgattuso/js-projects/raw/master/movie-app/cover.webp');
-}
-
-#projects .card-img.nine {
-  background-image: url('https://github.com/josephgattuso/js-projects/raw/master/random-choice-picker/cover.webp');
-}
-
-#projects .card-img.ten {
-  background-image: url('https://github.com/josephgattuso/js-projects/raw/master/theme-clock/cover.webp');
-}
-
-#projects .card-img.eleven {
-  background-image: url('https://github.com/josephgattuso/js-projects/raw/master/sound-board/cover.webp');
-}
-
-#projects .card-img.twelve {
-  background-image: url('https://github.com/josephgattuso/js-projects/raw/master/3d-boxes-background/cover.webp');
-}
-
-#projects .card-img.thirteen {
-  background-image: url('https://github.com/josephgattuso/js-projects-v2/raw/master/pong/cover.webp');
-}
+} */
 
 /* --- Buttons ------------------------------ */
 
@@ -556,20 +505,23 @@ nav li:nth-of-type(5) {
 
 /* --- Articles ------------------------------ */
 
-.grid-container {
+.projects-container,
+.articles-container {
   display: grid;
   grid-gap: 10px;
   margin: 0 20px;
   max-width: 1170px;
 }
 
-/* no grid support? */
-.grid-container {
+/* No Grid Suppport */
+.projects-container,
+.articles-container {
   display: flex;
   flex-wrap: wrap;
 }
 
-.grid-container {
+.projects-container,
+.articles-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   grid-auto-rows: minmax(150px, auto);
@@ -586,9 +538,8 @@ nav li:nth-of-type(5) {
 
 .card-img {
   background-size: cover;
-  display: flex;
-  justify-content: flex-end;
-  height: 200px;
+  width: 100%;
+  height: auto;
 }
 
 .card-content {
@@ -710,17 +661,19 @@ footer a {
   .banner {
     max-height: 280px;
   }
-  .slide img {
+  /* .slide img {
     max-height: 220px;
     width: 100%;
-  }
-  .card .card-img {
-    height: 280px;
+  } */
+  .projects-container,
+  .articles-container {
+    width: 100%;
   }
 }
 
 @supports (display: grid) {
-  .grid-container > * {
+  .projects-container,
+  .articles-container > * {
     margin: 0;
   }
 }
