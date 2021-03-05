@@ -478,13 +478,13 @@ nav i {
   max-width: 1170px;
 }
 
-.col-25 {
+.column.left {
   float: left;
   width: 25%;
   margin-top: 6px;
 }
 
-.col-75 {
+.column.right {
   float: left;
   width: 75%;
   margin-top: 6px;
@@ -542,11 +542,6 @@ footer {
   footer {
     margin-bottom: 2rem;
   }
-  .col-25,
-  .col-75 {
-    margin-top: 0;
-    width: 100%;
-  }
   .btn.submit {
     width: 100%;
     float: none;
@@ -554,6 +549,10 @@ footer {
   .banner {
     max-height: 280px;
     width: 100vw;
+  }
+  .column {
+    margin-top: 0;
+    width: 100%;
   }
   .grid-container {
     width: 100%;
