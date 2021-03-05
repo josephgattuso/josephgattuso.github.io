@@ -18,13 +18,10 @@ function addProjects() {
         <div class="card-content">
           <h3 class="card-title">${project.name}</h3>
           <p class="card-description">${project.desc}</p>
-          <a class="card-link" href=${project.repo} target="_blank" rel="noopener noreferrer nofollow">
-            Repo
-            <i class="fab fa-github"></i>          
-          </a>
           <a class="card-link" href=${project.demo} target="_blank" rel="noopener noreferrer nofollow">
-            Demo
-            <i class="fas fa-external-link-alt"></i>          
+            try it out</a>
+          <a class="card-link" href=${project.repo} target="_blank" rel="noopener noreferrer nofollow">
+            <i class="fab fa-github"></i>          
           </a>
         </div>
       </div>
