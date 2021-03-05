@@ -1,5 +1,5 @@
-import projects from './data/projects.js';
-import articles from './data/articles.js';
+import projects from './content/projects.js';
+import articles from './content/articles.js';
 
 // Add Project Cards
 

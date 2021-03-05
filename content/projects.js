@@ -59,9 +59,9 @@ const projects = [
     img:
       'https://github.com/josephgattuso/js-projects-v2/raw/master/paint-clone/cover.webp',
     desc: 'Recreating a paint app with HTML canvas',
-    demo: 'https://josephgattuso.github.io/js-projects/paint-clone',
+    demo: 'https://josephgattuso.github.io/js-projects-v2/paint-clone',
     repo:
-      'https://github.com/josephgattuso/js-projects/tree/master/paint-clone',
+      'https://github.com/josephgattuso/js-projects/tree-v2/master/paint-clone',
   },
   {
     name: 'Movie App',
