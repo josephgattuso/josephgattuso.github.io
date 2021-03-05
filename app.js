@@ -4,7 +4,7 @@ import articles from './data/articles.js';
 // Add Project Cards
 
 let projectData = [...projects];
-const projectsContainer = document.querySelector('.projects-container');
+const projectsContainer = document.getElementById('projects-container');
 
 function addProjects() {
   projectsContainer.innerHTML = projectData
@@ -16,13 +16,15 @@ function addProjects() {
           <img class="card-img" src=${project.img} alt=${project.name} />
         </a>
         <div class="card-content">
-          <h3>${project.name}</h3>
-          <p>${project.desc}</p>
-          <a class="link" href=${project.repo} target="_blank" rel="noopener noreferrer nofollow">
-            View Source
+          <h3 class="card-title">${project.name}</h3>
+          <p class="card-description">${project.desc}</p>
+          <a class="card-link" href=${project.repo} target="_blank" rel="noopener noreferrer nofollow">
+            Repo
+            <i class="fab fa-github"></i>          
           </a>
-          <a class="link" href=${project.demo} target="_blank" rel="noopener noreferrer nofollow">
-            Live Demo
+          <a class="card-link" href=${project.demo} target="_blank" rel="noopener noreferrer nofollow">
+            Demo
+            <i class="fas fa-external-link-alt"></i>          
           </a>
         </div>
       </div>
@@ -36,25 +38,26 @@ addProjects();
 // Add Article Cards
 
 let articlesData = [...articles];
-const articlesContainer = document.querySelector('.articles-container');
+const articlesContainer = document.getElementById('articles-container');
 
 function addArticles() {
   articlesContainer.innerHTML = articlesData
     .map(article => {
       const { name, img, desc, link } = article;
       return `
-    <div class="card">
-      <a href=${article.link} target="_blank" rel="noopener noreferrer nofollow">
-        <img class="card-img" src=${article.img} alt=${article.name} />
-      </a>
-      <div class="card-content">
-        <h3>${article.name}</h3>
-        <p>${article.desc}</p>
-        <a class="link" href=${article.link} target="_blank" rel="noopener noreferrer nofollow">
-          Read More &rarr;
+      <div class="card">
+        <a href=${article.link} target="_blank" rel="noopener noreferrer nofollow">
+          <img class="card-img" src=${article.img} alt=${article.name} />
         </a>
+        <div class="card-content">
+          <h3 class="card-title">${article.name}</h3>
+          <p class="card-description">${article.desc}</p>
+          <a class="card-link" href=${article.link} target="_blank" rel="noopener noreferrer nofollow">
+            Read More
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
       </div>
-    </div>
     `;
     })
     .join('');
