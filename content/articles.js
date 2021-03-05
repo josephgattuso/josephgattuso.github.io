@@ -10,7 +10,7 @@ const articles = [
   },
   {
     name: 'Lorem ipsum dolor sit amet consectetur',
-    img: 'https://placehold.co/600x400',
+    img: 'https://placehold.co/600x450',
     desc:
       'An algorithm is a sequence of steps that are followed to solve a problem or achieve a particular outcome. To solve an algorithm, you must first understand the problem, and then solve it with coding...',
     link:
@@ -18,7 +18,7 @@ const articles = [
   },
   {
     name: 'Lorem ipsum dolor sit amet consectetur',
-    img: 'https://placehold.co/600x400',
+    img: 'https://placehold.co/600x450',
     desc:
       'An algorithm is a sequence of steps that are followed to solve a problem or achieve a particular outcome. To solve an algorithm, you must first understand the problem, and then solve it with coding...',
     link:
