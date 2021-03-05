@@ -460,7 +460,7 @@ nav li:nth-of-type(5) {
 
 .card {
   background: var(--bgContainer);
-  border: 2px solid var(--bgBorder);
+  border: 1px solid var(--bgBorder);
   color: var(--textColor);
   flex: 1 1 200px;
 }
