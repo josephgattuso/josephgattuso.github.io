@@ -16,7 +16,7 @@
   --yellow: #fff500;
   /* Shadows */
   --clear: rgba(0, 0, 0, 0.2);
-  --box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
+  --box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.2);
   --invert-dark: invert(0);
   --invert-light: invert(1);
   /* Typography */
@@ -43,7 +43,7 @@
 /* Dark Theme */
 .darkmode {
   --background: #1a1a1a;
-  --accent-1: #111;
+  --accent-1: #212121;
   --accent-2: #333;
   --accent-3: #444;
   --accent-4: #666;
@@ -57,7 +57,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #1a1a1a;
-    --accent-1: #111;
+    --accent-1: #212121;
     --accent-2: #333;
     --accent-3: #444;
     --accent-4: #666;
@@ -421,12 +421,13 @@ nav i {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   grid-auto-rows: minmax(150px, auto);
+  grid-gap: 1rem;
   margin: 0 auto;
 }
 
 .card {
-  background: var(--accent-2);
-  border: 1px solid var(--accent-2);
+  background: var(--accent-1);
+  box-shadow: var(--box-shadow);
   flex: 1 1 200px;
 }
 
@@ -473,6 +474,7 @@ nav i {
 /* --- Contact Form ------------------------------ */
 .contact-form {
   background: var(--accent-2);
+  box-shadow: var(--box-shadow);
   margin: 20px 0 100px 0;
   padding: 20px;
   max-width: 1170px;
