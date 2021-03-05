@@ -386,7 +386,7 @@ nav i {
 }
 
 .cover .subtitle {
-  color: #444;
+  color: var(--accent-6);
   font-weight: normal;
 }
 
