@@ -1,105 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&family=IBM+Plex+Mono:wght@400;700&display=swap');
 
-/* --- Color Palettes ------------------------------ */
+/* --- Global Variables ------------------------------ */
 
 :root {
+  /* Colours */
   --white: #fff;
   --black: #000;
-  /* chrome */
-  --chrome-1: #f5f5f5;
-  --chrome-2: #eaeaea;
-  --chrome-3: #999;
-  --chrome-4: #888;
-  --chrome-5: #666;
-  --chrome-6: #444;
-  --chrome-7: #333;
-  --chrome-8: #1a1a1a;
-  --chrome-9: #222;
-  /* blue */
-  --blue-1: #4fb8ff;
-  --blue-2: #62bbee;
-  --blue-3: #0070f3;
-  --blue-4: #0761d1;
-  /* cyan */
-  --cyan-1: #a3faef;
-  --cyan-2: #00cdb3;
-  --cyan-3: #00ffe5;
-  --cyan-4: #29bc9b;
-  /* pink */
-  --pink-1: #f81ce5;
-  --pink-2: #eb367f;
-  --pink-3: #ff0080;
-  --pink-4: #6c00f8;
+  --red: #c50000;
+  --blue: #0070f3;
+  --cyan: #00cdb3;
+  /* Highlights */
+  --purple: #f81ce5;
+  --magenta: #eb367f;
+  --pink: #ff0080;
+  --yellow: #fff500;
+  /* Shadows */
+  --clear: rgba(0, 0, 0, 0.2);
+  --box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
+  --invert-dark: invert(0);
+  --invert-light: invert(1);
+  /* Typography */
+  --heading-font: 'IBM Plex Mono', sans-serif;
+  --body-font: 'IBM Plex Sans', sans-serif;
 }
 
 /* --- Theme ------------------------------ */
 
 /* Light Theme */
 :root {
-  --bgBorder: var(--chrome-2);
-  --bgColor: var(--chrome-1);
-  --bgContainer: var(--white);
-  --bgClear: rgba(0, 0, 0, 0.2);
-  --boxShadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
-  --dataTheme: light;
-  --primaryColor: var(--blue-3);
-  --primaryColorAlt: var(--cyan-2);
-  --secondaryColor: var(--pink-3);
-  --tertiaryColor: var(--blue-3);
-  --textColor: var(--chrome-9);
-  --textColorAlt: var(--chrome-5);
-  --textColorHead: var(--black);
-  /* Nav */
-  --navColor1: var(--chrome-2);
-  --navColor2: var(--chrome-3);
-  --navColor3: var(--chrome-4);
-  --navColor4: var(--chrome-5);
-  --navColor5: var(--chrome-6);
-  /* Typography */
-  --headingFont: 'IBM Plex Mono', sans-serif;
-  --bodyFont: 'IBM Plex Sans', sans-serif;
+  --background: #fff;
+  --accent-1: #fafafa;
+  --accent-2: #eaeaea;
+  --accent-3: #999;
+  --accent-4: #888;
+  --accent-5: #666;
+  --accent-6: #444;
+  --accent-7: #333;
+  --accent-8: #111;
+  --foreground: #000;
 }
 
 /* Dark Theme */
 .darkmode {
-  --bgBorder: var(--chrome-7);
-  --bgColor: var(--chrome-8);
-  --bgContainer: var(--chrome-7);
-  --bgClear: rgba(0, 0, 0, 0.7);
-  --dataTheme: dark;
-  --primaryColor: var(--cyan-2);
-  --primaryColorAlt: var(--cyan-3);
-  --secondaryColor: var(--pink-1);
-  --tertiaryColor: var(--blue-2);
-  --textColor: #7e7e7e;
-  --textColorAlt: #ffffffb3;
-  --textColorHead: var(--white);
-  /* Nav */
-  --navColor1: var(--chrome-8);
-  --navColor2: var(--chrome-7);
-  --navColor3: var(--chrome-6);
-  --navColor4: var(--chrome-5);
-  --navColor5: var(--chrome-4);
+  --background: #1a1a1a;
+  --accent-1: #111;
+  --accent-2: #333;
+  --accent-3: #444;
+  --accent-4: #666;
+  --accent-5: #888;
+  --accent-6: #999;
+  --accent-7: #eaeaea;
+  --accent-8: #fafafa;
+  --foreground: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bgColor: var(--chrome-8);
-    --bgContainer: var(--chrome-7);
-    --bgClear: rgba(0, 0, 0, 0.7);
-    --dataTheme: dark;
-    --primaryColor: var(--cyan-2);
-    --primaryColorAlt: var(--cyan-3);
-    --secondaryColor: var(--pink-1);
-    --tertiaryColor: var(--blue-2);
-    --textColor: #7e7e7e;
-    --textColorAlt: #ffffffb3;
-    --textColorHead: var(--white);
-    --navColor1: var(--chrome-8);
-    --navColor2: var(--chrome-7);
-    --navColor3: var(--chrome-6);
-    --navColor4: var(--chrome-5);
-    --navColor5: var(--chrome-4);
+    --background: #1a1a1a;
+    --accent-1: #111;
+    --accent-2: #333;
+    --accent-3: #444;
+    --accent-4: #666;
+    --accent-5: #888;
+    --accent-6: #999;
+    --accent-7: #eaeaea;
+    --accent-8: #fafafa;
+    --foreground: #fff;
   }
 }
 
@@ -111,9 +77,9 @@ html {
 }
 
 body {
-  background: var(--bgColor);
-  color: var(--textColor);
-  font-family: var(--bodyFont);
+  background: var(--background);
+  color: var(--accent-6);
+  font-family: var(--body-font);
   overflow-x: hidden;
   margin: 0;
   padding: 0;
@@ -131,8 +97,8 @@ section p {
 }
 
 a {
-  color: var(--blue-3);
-  text-decoration: none;
+  color: var(--foreground);
+  text-decoration: underline;
 }
 
 /* Typography */
@@ -143,8 +109,8 @@ h4,
 h5,
 h6,
 .title {
-  color: var(--textColorHead);
-  font-family: var(--headingFont);
+  color: var(--foreground);
+  font-family: var(--heading-font);
   font-weight: 400;
 }
 
@@ -152,9 +118,8 @@ h1 {
   font-size: 3rem;
 }
 
-.fab,
-.fas {
-  color: var(--blue-3);
+i {
+  color: var(--red);
   font-size: 2rem;
   width: 36px;
 }
@@ -213,7 +178,6 @@ nav ul li {
 nav li a {
   position: relative;
   top: 45%;
-  color: var(--primaryColorAlt);
   text-transform: uppercase;
   letter-spacing: 4px;
   text-decoration: none;
@@ -226,7 +190,7 @@ nav li a::before {
   content: '';
   width: 25vw;
   height: 3px;
-  background: var(--primaryColorAlt);
+  background: var(--red);
   position: absolute;
   top: 47.5%;
   left: 0;
@@ -238,35 +202,37 @@ nav li a:hover::before {
 }
 
 nav li:nth-of-type(1) {
-  background: var(--navColor1);
+  background: var(--accent-1);
 }
 
 nav li:nth-of-type(2) {
-  background: var(--navColor2);
+  background: var(--accent-2);
 }
 
 nav li:nth-of-type(3) {
-  background: var(--navColor3);
+  background: var(--accent-3);
 }
 
 nav li:nth-of-type(4) {
-  background: var(--navColor4);
+  background: var(--accent-4);
 }
 
 nav li:nth-of-type(5) {
-  background: var(--navColor5);
+  background: var(--accent-5);
+}
+
+nav i {
+  color: var(--foreground);
+  font-size: 1.8rem;
+  margin-right: 0.5rem;
 }
 
 .navbar {
-  background: var(--bgClear);
-  border: 1px solid var(--bgClear);
+  background: var(--clear);
+  border: 1px solid var(--clear);
   height: 70px;
   top: 0;
   position: sticky;
-}
-
-.navbar .fas {
-  color: var(--textColorHead);
 }
 
 .overlay {
@@ -356,7 +322,7 @@ nav li:nth-of-type(5) {
 .dark-mode-toggle {
   background: transparent;
   border: none;
-  color: var(--textColorHead);
+  color: var(--foreground);
   display: inline;
   position: fixed;
   right: 7rem;
@@ -386,7 +352,7 @@ nav li:nth-of-type(5) {
 .bar3 {
   width: 35px;
   height: 3px;
-  background: var(--textColor);
+  background: var(--foreground);
   margin: 8px 0;
   transition: 0.4s;
 }
@@ -459,10 +425,13 @@ nav li:nth-of-type(5) {
 }
 
 .card {
-  background: var(--bgContainer);
-  border: 1px solid var(--bgBorder);
-  color: var(--textColor);
+  background: var(--accent-2);
+  border: 1px solid var(--accent-2);
   flex: 1 1 200px;
+}
+
+.card-title {
+  color: var(--foreground);
 }
 
 .card-img {
@@ -480,17 +449,30 @@ nav li:nth-of-type(5) {
 }
 
 .card-link {
-  color: var(--primaryColor);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.card-link:not(:first-of-type) {
+  margin-left: 0.5rem;
 }
 
 .card-link i {
-  color: var(--primaryColor);
+  color: var(--foreground);
   font-size: 1rem;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+.card-link i:hover {
+  color: var(--red);
 }
 
 /* --- Contact Form ------------------------------ */
 .contact-form {
-  background: var(--bgContainer);
+  background: var(--accent-2);
   margin: 20px 0 100px 0;
   padding: 20px;
   max-width: 1170px;
@@ -515,10 +497,9 @@ nav li:nth-of-type(5) {
 }
 
 .input {
-  background: #fff;
-  color: #444;
-  border: 1px solid #ccc;
-  font-family: 'Open Sans', -apple-system, system-ui, sans-serif;
+  background: var(--white);
+  border: 1px solid var(--accent-1);
+  font-family: var(--body-font);
   font-size: 1rem;
   padding: 12px;
   resize: vertical;
@@ -527,7 +508,7 @@ nav li:nth-of-type(5) {
 }
 
 .label {
-  color: var(--textColorHead);
+  color: var(--foreground);
   display: inline-block;
   padding: 1rem 1rem 1rem 0;
 }
