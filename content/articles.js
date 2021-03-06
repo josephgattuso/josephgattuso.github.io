@@ -1,26 +1,25 @@
 const articles = [
   {
-    name: 'Simple JavaScript Algorithms',
-    img:
-      'https://cdn-images-1.medium.com/max/1600/1*AsY7dn8OZawwh8HqtWHO5Q.jpeg',
+    name: 'JavaScript Algorithms: Reverse a String',
+    img: 'https://miro.medium.com/max/1425/1*zmppN9ixHsHzfVXPRcAz0w.jpeg',
     desc:
-      'An algorithm is a sequence of steps that are followed to solve a problem or achieve a particular outcome. To solve an algorithm, you must first understand the problem, and then solve it with coding...',
+      'Learn how to create a function that reverses all the letters from a string...',
+    link:
+      'https://joeetuso.medium.com/javascript-algorithms-reverse-a-string-b3e3c10537f8',
+  },
+  {
+    name: 'Lorem ipsum dolor sit amet consectetur',
+    img: 'https://placehold.co/600x425',
+    desc:
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsam pariatur quos...',
     link:
       'https://medium.com/@joeetuso/simple-javascript-algorithms-b249ffdc2fd2',
   },
   {
     name: 'Lorem ipsum dolor sit amet consectetur',
-    img: 'https://placehold.co/600x450',
+    img: 'https://placehold.co/600x425',
     desc:
-      'An algorithm is a sequence of steps that are followed to solve a problem or achieve a particular outcome. To solve an algorithm, you must first understand the problem, and then solve it with coding...',
-    link:
-      'https://medium.com/@joeetuso/simple-javascript-algorithms-b249ffdc2fd2',
-  },
-  {
-    name: 'Lorem ipsum dolor sit amet consectetur',
-    img: 'https://placehold.co/600x450',
-    desc:
-      'An algorithm is a sequence of steps that are followed to solve a problem or achieve a particular outcome. To solve an algorithm, you must first understand the problem, and then solve it with coding...',
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsam pariatur quos...',
     link:
       'https://medium.com/@joeetuso/simple-javascript-algorithms-b249ffdc2fd2',
   },
