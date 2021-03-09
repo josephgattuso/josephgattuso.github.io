@@ -570,7 +570,8 @@ footer {
     max-height: 280px;
     width: 100vw;
   }
-  .column {
+  .column.left,
+  .column.right {
     margin-top: 0;
     width: 100%;
   }
