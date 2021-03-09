@@ -27,7 +27,7 @@
 /* --- Theme ------------------------------ */
 
 /* Light Theme */
-:root {
+body {
   --background: #fff;
   --accent-1: #fafafa;
   --accent-2: #eaeaea;
@@ -41,7 +41,7 @@
 }
 
 /* Dark Theme */
-.darkmode {
+body.dark-theme {
   --background: #1a1a1a;
   --accent-1: #212121;
   --accent-2: #333;
@@ -55,7 +55,8 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  /* defaults to dark theme */
+  body {
     --background: #1a1a1a;
     --accent-1: #212121;
     --accent-2: #333;
@@ -66,6 +67,18 @@
     --accent-7: #eaeaea;
     --accent-8: #fafafa;
     --foreground: #fff;
+  }
+  body.light-theme {
+    --background: #fff;
+    --accent-1: #fafafa;
+    --accent-2: #eaeaea;
+    --accent-3: #999;
+    --accent-4: #888;
+    --accent-5: #666;
+    --accent-6: #444;
+    --accent-7: #333;
+    --accent-8: #111;
+    --foreground: #000;
   }
 }
 
@@ -319,14 +332,19 @@ nav i {
 
 /* --- Theme Toggle ------------------------------ */
 
-.dark-mode-toggle {
+.theme-toggle {
   background: transparent;
   border: none;
-  color: var(--foreground);
+  cursor: pointer;
   display: inline;
+  outline: none;
   position: fixed;
   right: 7rem;
   top: 1rem;
+}
+
+.theme-toggle .fas {
+  color: var(--foreground);
 }
 
 /* --- Menu Bars ------------------------------------ */
