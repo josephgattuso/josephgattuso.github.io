@@ -148,6 +148,11 @@ toggleTheme.addEventListener('click', function () {
   localStorage.setItem('theme', theme);
 });
 
+// Set Current Year
+
+const date = document.querySelector('#date');
+date.innerHTML = new Date().getFullYear();
+
 // Image Carousel
 
 // for (let i = 0; i < projects.length; i++) {
