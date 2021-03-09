@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src='logo.png' width='48'/>
+  <img src='assets/logo.png' width='48'/>
   <br/>
   <a
     href="https://josephgattuso.github.io/josephgattuso.github.io"
