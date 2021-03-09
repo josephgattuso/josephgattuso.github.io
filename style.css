@@ -141,6 +141,14 @@ i {
   text-align: center;
   text-transform: uppercase;
   font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.underline {
+  width: 5rem;
+  height: 0.25rem;
+  margin: 1.25rem auto;
+  background: var(--red);
 }
 
 /* --- Buttons ------------------------------ */
