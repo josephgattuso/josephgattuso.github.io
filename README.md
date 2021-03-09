@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src='images/logo.png' width='48'/>
+  <img src='logo.png' width='48'/>
   <br/>
   <a
     href="https://josephgattuso.github.io/josephgattuso.github.io"
@@ -75,6 +75,5 @@
 
 ## 🔗 Resources
 
-- [Founders and Coders](https://www.foundersandcoders.com/requirements/website) - Website requirements
 - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) - JavaScript Developer Docs
 - [Learn JavaScript](https://learnjavascript.online/) - Learn and practice modern JavaScript step by step
