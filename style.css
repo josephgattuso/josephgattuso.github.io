@@ -435,6 +435,7 @@ nav i {
   grid-gap: 10px;
   margin: 0 20px;
   max-width: 1170px;
+  place-content: center;
 }
 
 /* No Grid Suppport */
@@ -446,6 +447,10 @@ nav i {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-areas:
+    'a a a'
+    'b d b'
+    'c c c';
   grid-auto-rows: minmax(150px, auto);
   grid-gap: 1rem;
   margin: 0 auto;
@@ -592,4 +597,21 @@ footer {
   .grid-container > * {
     margin: 0;
   }
+}
+
+.dev-jobs {
+  width: 85vw;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+.feature-project img {
+  height: 15rem;
+}
+
+.card-features {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 2rem;
 }
