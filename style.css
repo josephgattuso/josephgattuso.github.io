@@ -38,6 +38,7 @@ body {
   --accent-7: #333;
   --accent-8: #111;
   --foreground: #000;
+  --theme-img: url('https://raw.githubusercontent.com/josephgattuso/dev-jobs/master/public/cover_light.webp');
 }
 
 /* Dark Theme */
@@ -52,6 +53,7 @@ body.dark-theme {
   --accent-7: #eaeaea;
   --accent-8: #fafafa;
   --foreground: #fff;
+  --theme-img: url('https://raw.githubusercontent.com/josephgattuso/dev-jobs/master/public/cover_dark.webp');
 }
 
 @media (prefers-color-scheme: dark) {
@@ -67,6 +69,7 @@ body.dark-theme {
     --accent-7: #eaeaea;
     --accent-8: #fafafa;
     --foreground: #fff;
+    --theme-img: url('https://raw.githubusercontent.com/josephgattuso/dev-jobs/master/public/cover_dark.webp');
   }
   body.light-theme {
     --background: #fff;
@@ -79,6 +82,7 @@ body.dark-theme {
     --accent-7: #333;
     --accent-8: #111;
     --foreground: #000;
+    --theme-img: url('https://raw.githubusercontent.com/josephgattuso/dev-jobs/master/public/cover_light.webp');
   }
 }
 
@@ -447,10 +451,6 @@ nav i {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  grid-template-areas:
-    'a a a'
-    'b d b'
-    'c c c';
   grid-auto-rows: minmax(150px, auto);
   grid-gap: 1rem;
   margin: 0 auto;
@@ -501,6 +501,22 @@ nav i {
 .card-link i:hover {
   color: var(--red);
 }
+
+.feature-project {
+  width: 85vw;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+.feature-image {
+  background-size: cover;
+  height: 15rem;
+  background-image: var(--theme-img);
+}
+
+/* .feature-image.dark {
+  background-image: url('https://raw.githubusercontent.com/josephgattuso/dev-jobs/master/public/cover_dark.webp');
+} */
 
 /* --- Contact Form ------------------------------ */
 .contact-form {
@@ -588,6 +604,9 @@ footer {
     margin-top: 0;
     width: 100%;
   }
+  .feature-project {
+    width: 100%;
+  }
   .grid-container {
     width: 100%;
   }
@@ -597,21 +616,4 @@ footer {
   .grid-container > * {
     margin: 0;
   }
-}
-
-.dev-jobs {
-  width: 85vw;
-  max-width: 30rem;
-  margin: 0 auto;
-}
-
-.feature-project img {
-  height: 15rem;
-}
-
-.card-features {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin-bottom: 2rem;
 }
