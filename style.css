@@ -472,6 +472,14 @@ nav i {
   height: auto;
 }
 
+.card-img:hover,
+.card-img:focus,
+.feature-img:hover,
+.feature-img:focus {
+  outline: none;
+  opacity: 0.5;
+}
+
 .card-content {
   padding: 15px;
 }
@@ -508,13 +516,13 @@ nav i {
   margin: 0 auto;
 }
 
-.feature-image {
+.feature-img {
   background-size: cover;
   height: 15rem;
   background-image: var(--theme-img);
 }
 
-/* .feature-image.dark {
+/* .feature-img.dark {
   background-image: url('https://raw.githubusercontent.com/josephgattuso/dev-jobs/master/public/cover_dark.webp');
 } */
 
