@@ -2,17 +2,17 @@
   <img src='assets/logo.png' width='48'/>
   <br/>
   <a
-    href="https://josephgattuso.github.io/josephgattuso.github.io"
+    href="https://gattuso.dev"
     target="_blank"
     rel="noopener noreferrer nofollow"
   >
-    MySite
+    gattuso.dev
   </a>
 </h1>
 
 <p align='center'>
   <em>
-    A spectacular web app built in vanilla JavaScript
+    A spectacular web site built in plain JavaScript
   </em>
 </p>
 
