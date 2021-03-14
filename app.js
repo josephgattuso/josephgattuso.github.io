@@ -18,10 +18,11 @@ function addProjects() {
         <div class="card-content">
           <h3 class="card-title">${project.name}</h3>
           <p class="card-description">${project.desc}</p>
-          <a class="card-link" href=${project.demo} target="_blank" rel="noopener noreferrer nofollow">
-            try it out</a>
           <a class="card-link" href=${project.repo} target="_blank" rel="noopener noreferrer nofollow">
             <i class="fab fa-github"></i>          
+          </a>
+          <a class="card-link" href=${project.demo} target="_blank" rel="noopener noreferrer nofollow">
+            Try it Out
           </a>
         </div>
       </div>
@@ -49,9 +50,11 @@ function addArticles() {
         <div class="card-content">
           <h3 class="card-title">${article.name}</h3>
           <p class="card-description">${article.desc}</p>
-          <a class="card-link" href=${article.link} target="_blank" rel="noopener noreferrer nofollow">
-            Read More
-            <i class="fas fa-external-link-alt"></i>
+          <a class="card-link external" href=${article.link} target="_blank" rel="noopener noreferrer nofollow">
+            <span>
+              Read More
+              <i class="fas fa-external-link-alt"></i>
+            </span>
           </a>
         </div>
       </div>

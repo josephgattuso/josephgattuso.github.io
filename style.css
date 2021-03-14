@@ -141,18 +141,26 @@ i {
   width: 36px;
 }
 
+.subtitle {
+  color: var(--accent-6);
+  font-family: var(--heading-font);
+  font-weight: normal;
+  margin-top: 5rem;
+  text-align: center;
+}
+
 .title {
+  font-size: 2.5rem;
+  margin-top: 5rem;
   text-align: center;
   text-transform: uppercase;
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
 }
 
 .underline {
-  width: 5rem;
-  height: 0.25rem;
-  margin: 1.25rem auto;
   background: var(--red);
+  height: 0.25rem;
+  margin: 1.5rem auto;
+  width: 5rem;
 }
 
 /* --- Buttons ------------------------------ */
@@ -415,11 +423,6 @@ nav i {
   object-fit: cover;
 }
 
-.cover .subtitle {
-  color: var(--accent-6);
-  font-weight: normal;
-}
-
 /* --- About Section ------------------------------ */
 .about-section {
   max-width: 1170px;
@@ -467,9 +470,9 @@ nav i {
 }
 
 .card-img {
-  background-size: cover;
+  object-fit: cover;
+  height: 280px;
   width: 100%;
-  height: auto;
 }
 
 .card-img:hover,
@@ -477,7 +480,7 @@ nav i {
 .feature-img:hover,
 .feature-img:focus {
   outline: none;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .card-content {
@@ -489,12 +492,16 @@ nav i {
 }
 
 .card-link {
+  font-size: 1rem;
   text-decoration: none;
   text-transform: uppercase;
 }
 
-.card-link:not(:first-of-type) {
-  margin-left: 0.5rem;
+.card-link.external,
+.card-link.external:hover,
+.card-link.external i:hover {
+  color: var(--foreground);
+  text-decoration: none;
 }
 
 .card-link i {
@@ -521,10 +528,6 @@ nav i {
   height: 15rem;
   background-image: var(--theme-img);
 }
-
-/* .feature-img.dark {
-  background-image: url('https://raw.githubusercontent.com/josephgattuso/dev-jobs/master/public/cover_dark.webp');
-} */
 
 /* --- Contact Form ------------------------------ */
 .contact-form {
