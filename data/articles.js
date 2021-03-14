@@ -5,15 +5,15 @@ const articles = [
     desc:
       'Learn how to create a function that reverses all the letters from a string...',
     link:
-      'https://joeetuso.medium.com/javascript-algorithms-reverse-a-string-b3e3c10537f8',
+      'https://javascript.plainenglish.io/javascript-algorithms-reverse-a-string-b3e3c10537f8',
   },
   {
-    name: 'Lorem ipsum dolor sit amet consectetur',
-    img: 'https://placehold.co/600x425',
+    name: 'JavaScript Algorithms: Bubble Sort',
+    img: 'https://miro.medium.com/max/1400/1*TRRtBscIKyI17kNdTYU50g.jpeg',
     desc:
-      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsam pariatur quos...',
+      'Learn how to create a simple algorithm that sorts elements from a list.',
     link:
-      'https://medium.com/@joeetuso/simple-javascript-algorithms-b249ffdc2fd2',
+      'https://javascript.plainenglish.io/javascript-algorithms-bubble-sort-d265d27ea42',
   },
   {
     name: 'Lorem ipsum dolor sit amet consectetur',
