@@ -492,7 +492,7 @@ nav i {
   clear: both;
   display: flex;
   flex-direction: column;
-  height: 400px;
+  height: 500px;
   margin: 0;
   min-width: 350px;
   padding: 1.5rem;
@@ -516,7 +516,9 @@ nav i {
 }
 
 .slide img {
-  background-size: cover;
+  object-fit: cover;
+  height: 280px;
+  width: 100%;
 }
 
 /* --- Articles ------------------------------ */
@@ -556,7 +558,7 @@ nav i {
 
 .card-img {
   object-fit: cover;
-  height: 280px;
+  height: 200px;
   width: 100%;
 }
 
