@@ -544,6 +544,11 @@ nav i {
   padding: 15px;
 }
 
+.card-features {
+  margin-bottom: 1rem;
+  padding: 0 2rem;
+}
+
 .card-description {
   margin-left: 0;
 }
