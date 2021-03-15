@@ -147,7 +147,7 @@ h1 {
 }
 
 i {
-  color: var(--red);
+  color: var(--magenta);
   font-size: 2rem;
   width: 36px;
 }
@@ -168,7 +168,7 @@ i {
 }
 
 .underline {
-  background: var(--red);
+  background: var(--magenta);
   height: 0.25rem;
   margin: 1.5rem auto;
   width: 5rem;
@@ -234,7 +234,7 @@ nav li a::before {
   content: '';
   width: 25vw;
   height: 3px;
-  background: var(--red);
+  background: var(--magenta);
   position: absolute;
   top: 47.5%;
   left: 0;
@@ -449,48 +449,74 @@ nav i {
 
 /* --- Projects Section ------------------------------ */
 
-.feature-project {
+.feature-project .card {
+  border-radius: 10px;
+  margin: 0 auto;
   width: 85vw;
   max-width: 30rem;
-  margin: 0 auto;
 }
 
 .feature-img {
-  background-size: cover;
-  height: 15rem;
   background-image: var(--theme-img);
+  background-size: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 15rem;
 }
 
 .slider-container {
-  cursor: grab;
-  display: inline-flex;
-  height: 75%;
-  overflow: hidden;
-  transform: translateX(0);
-  transition: transform 0.3s ease-out;
+  display: flex;
+  padding: 3rem;
+  overflow-x: scroll;
+  width: 100vw;
+  max-width: 1170px;
+}
+
+.slider-container::-webkit-scrollbar {
+  height: 0.3rem;
+  width: 1rem;
+}
+.slider-container::-webkit-scrollbar-thumb {
+  background: var(--magenta);
+  cursor: pointer;
+}
+
+.slider-container::-webkit-scrollbar-track {
+  background: var(--accent-3);
 }
 
 .slide {
+  background: var(--accent-1);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  clear: both;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  max-height: 75%;
-  width: 100vw;
-  user-select: none;
+  height: 400px;
+  margin: 0;
+  min-width: 350px;
+  padding: 1.5rem;
+  position: relative;
+  scroll-snap-align: start;
+  transition: 0.2s;
+  width: 500px;
+}
+
+.slide:focus-within ~ .slide,
+.slide:hover ~ .slide {
+  transform: translateX(130px);
+}
+
+.slide:hover {
+  transform: translateY(-1rem);
+}
+
+.slide:not(:first-child) {
+  margin-left: -130px;
 }
 
 .slide img {
-  object-fit: cover;
-  margin-bottom: 1rem;
-  max-height: 60%;
-  max-width: 100%;
-  transition: transform 0.3s ease-in-out;
-}
-
-.grabbing {
-  cursor: grabbing;
+  background-size: cover;
 }
 
 /* --- Articles ------------------------------ */
