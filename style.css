@@ -90,19 +90,25 @@ body.dark-theme {
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
+html,
+body {
+  font-family: 'Open Sans', sans-serif;
   height: 100%;
   width: 100%;
+  background-color: #333;
+  color: #fff;
+  line-height: 1.7;
+  overflow-x: hidden;
 }
 
 body {
   background: var(--background);
   color: var(--accent-6);
   font-family: var(--body-font);
-  overflow-x: hidden;
   margin: 0;
   padding: 0;
 }
@@ -458,7 +464,7 @@ nav i {
 .slider-container {
   cursor: grab;
   display: inline-flex;
-  height: 75vh;
+  height: 75%;
   overflow: hidden;
   transform: translateX(0);
   transition: transform 0.3s ease-out;
@@ -470,7 +476,7 @@ nav i {
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  max-height: 75vh;
+  max-height: 75%;
   width: 100vw;
   user-select: none;
 }
@@ -485,10 +491,6 @@ nav i {
 
 .grabbing {
   cursor: grabbing;
-}
-
-.grabbing .slide img {
-  transform: scale(0.9);
 }
 
 /* --- Articles ------------------------------ */
