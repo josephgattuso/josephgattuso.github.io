@@ -4,26 +4,37 @@ import articles from './data/articles.js';
 // Add Project Cards
 
 let projectData = [...projects];
-const projectsContainer = document.getElementById('projects-container');
+const projectsContainer = document.querySelector('#projects-container');
 
 function addProjects() {
   projectsContainer.innerHTML = projectData
     .map(project => {
       const { name, img, desc, repo, demo } = project;
       return `
-      <div class="card">
-        <a href=${project.demo} target="_blank" rel="noopener noreferrer nofollow">
-          <img class="card-img" src=${project.img} alt=${project.name} />
-        </a>
-        <div class="card-content">
-          <h3 class="card-title">${project.name}</h3>
-          <p class="card-description">${project.desc}</p>
-          <a class="card-link" href=${project.repo} target="_blank" rel="noopener noreferrer nofollow">
-            <i class="fab fa-github"></i>          
-          </a>
-          <a class="card-link" href=${project.demo} target="_blank" rel="noopener noreferrer nofollow">
-            Try it Out
-          </a>
+      <div class="slide">
+        <h3>${project.name}</h3>
+        <p>${project.desc}</p>
+        <img src="${project.img}" alt="${project.name}" />
+        <div class="btn-container">
+          <a
+              class="card-link"
+              href="${project.repo}"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
+              Repo
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              class="card-link"
+              href="${project.demo}"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
+              Demo
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
         </div>
       </div>
       `;
@@ -156,77 +167,83 @@ toggleTheme.addEventListener('click', function () {
 const date = document.querySelector('#date');
 date.innerHTML = new Date().getFullYear();
 
-// Image Carousel
+// Project Carousel
 
-// for (let i = 0; i < projects.length; i++) {
-//   const slider = document.querySelector('.slider');
-//   const { name, Desc, demo, repo } = projects[i];
-//   const projectData = `
-//     <figure class="slide ${i == 0 ? 'show' : ''}">
-//       <a href="${demo}" target="_blank" rel="noopener noreferrer">
-//         <img
-//           class="slide-img"
-//           src="https://github.com/josephgattuso/js-projects/raw/master/${name
-//             .replace(/\s+/g, '-')
-//             .toLowerCase()}/cover.webp"
-//           title="${name.replace(/\s+/g, '&nbsp;')}"
-//           alt="${name.replace(/\s+/g, '&nbsp;')}"
-//           width="720"
-//           height="320"
-//           />
-//       </a>
-//       <figcaption>
-//         <h3>${name}</h3>
-//         <p>${Desc}</p>
-//         <a href="${repo}" target="_blank" rel="noopener noreferrer">
-//           View Source
-//         </a>
-//         <a href="${demo}" target="_blank" rel="noopener noreferrer">
-//           Live Demo
-//         </a>
-//       </figcaption>
-//     </figure>
-//   `;
-//   slider.innerHTML += projectData;
-// }
+const slider = document.querySelector('.slider-container');
+const slides = Array.from(document.querySelectorAll('.slide'));
 
-// //select all slides
-// const slides = document.querySelectorAll('.slide');
+let isDragging = false;
+let startPos = 0;
+let currentTranslate = 0;
+let prevTranslate = 0;
+let animationID = 0;
+let currentIndex = 0;
 
-// //set slide count
-// let currentSlide = 0;
+slides.forEach((slide, index) => {
+  const slideImage = slide.querySelector('img');
+  slideImage.addEventListener('dragstart', e => e.preventDefault());
 
-// const slideInterval = setInterval(() => {
-//   slides[currentSlide].classList.remove('show');
-//   currentSlide = (currentSlide + 1) % slides.length;
-//   slides[currentSlide].classList.add('show');
-// }, 5000);
+  // Touch events
+  slide.addEventListener('touchstart', touchStart(index));
+  slide.addEventListener('touchend', touchEnd);
+  slide.addEventListener('touchmove', touchMove);
 
-// //increment slide index
-// const nextSlide = () => {
-//   changeSlide(currentSlide + 1);
-// };
+  // Mouse events
+  slide.addEventListener('mousedown', touchStart(index));
+  slide.addEventListener('mouseup', touchEnd);
+  slide.addEventListener('mouseleave', touchEnd);
+  slide.addEventListener('mousemove', touchMove);
+});
 
-// //decrement slide index
-// const prevSlide = () => {
-//   changeSlide(currentSlide - 1);
-// };
+// Disable context menu
+window.oncontextmenu = function (event) {
+  event.preventDefault();
+  event.stopPropagation();
+  return false;
+};
 
-// //select arrow controls
-// const next = document.querySelector('.next-btn');
-// const prev = document.querySelector('.prev-btn');
+function touchStart(index) {
+  return function (event) {
+    currentIndex = index;
+    startPos = getPositionX(event);
+    isDragging = true;
+    animationID = requestAnimationFrame(animation);
+    slider.classList.add('grabbing');
+  };
+}
 
-// //click event that passes to changeSlide function
-// next.addEventListener('click', nextSlide, false);
-// prev.addEventListener('click', prevSlide, false);
+function touchEnd() {
+  isDragging = false;
+  cancelAnimationFrame(animationID);
+  const movedBy = currentTranslate - prevTranslate;
+  if (movedBy < -100 && currentIndex < slides.length - 1) currentIndex += 1;
+  if (movedBy > 100 && currentIndex > 0) currentIndex -= 1;
+  setPositionByIndex();
+  slider.classList.remove('grabbing');
+}
 
-// const changeSlide = clicked => {
-//   //selects class for current slide
-//   slides[currentSlide].className = 'slide';
+function touchMove(event) {
+  if (isDragging) {
+    const currentPosition = getPositionX(event);
+    currentTranslate = prevTranslate + currentPosition - startPos;
+  }
+}
 
-//   //checks remainder of link to select current slides
-//   currentSlide = (clicked + slides.length) % slides.length;
+function getPositionX(event) {
+  return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+}
 
-//   //adds css class to show current slide
-//   slides[currentSlide].className = 'slide show';
-// };
+function animation() {
+  setSliderPosition();
+  if (isDragging) requestAnimationFrame(animation);
+}
+
+function setSliderPosition() {
+  slider.style.transform = `translateX(${currentTranslate}px)`;
+}
+
+function setPositionByIndex() {
+  currentTranslate = currentIndex * -window.innerWidth;
+  prevTranslate = currentTranslate;
+  setSliderPosition();
+}
