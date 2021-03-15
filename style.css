@@ -6,11 +6,11 @@
   /* Colours */
   --white: #fff;
   --black: #000;
-  --red: #c50000;
+  --gray: #9fa6b2;
   --blue: #0070f3;
   --cyan: #00cdb3;
   /* Highlights */
-  --purple: #f81ce5;
+  --purple: #5964e0;
   --magenta: #eb367f;
   --pink: #ff0080;
   --yellow: #fff500;
@@ -31,20 +31,21 @@ body {
   --background: #fff;
   --accent-1: #fafafa;
   --accent-2: #eaeaea;
-  --accent-3: #999;
+  --accent-3: #9fa6b2;
   --accent-4: #888;
   --accent-5: #666;
   --accent-6: #444;
   --accent-7: #333;
   --accent-8: #111;
   --foreground: #000;
+  --navbar: var(--purple);
   --theme-img: url('https://raw.githubusercontent.com/josephgattuso/dev-jobs/master/public/cover_light.webp');
 }
 
 /* Dark Theme */
 body.dark-theme {
-  --background: #1a1a1a;
-  --accent-1: #212121;
+  --background: #121721;
+  --accent-1: #18202d;
   --accent-2: #333;
   --accent-3: #444;
   --accent-4: #666;
@@ -53,14 +54,15 @@ body.dark-theme {
   --accent-7: #eaeaea;
   --accent-8: #fafafa;
   --foreground: #fff;
+  --navbar: #121212;
   --theme-img: url('https://raw.githubusercontent.com/josephgattuso/dev-jobs/master/public/cover_dark.webp');
 }
 
 @media (prefers-color-scheme: dark) {
   /* defaults to dark theme */
   body {
-    --background: #1a1a1a;
-    --accent-1: #212121;
+    --background: #121721;
+    --accent-1: #18202d;
     --accent-2: #333;
     --accent-3: #444;
     --accent-4: #666;
@@ -69,6 +71,7 @@ body.dark-theme {
     --accent-7: #eaeaea;
     --accent-8: #fafafa;
     --foreground: #fff;
+    --navbar: #121212;
     --theme-img: url('https://raw.githubusercontent.com/josephgattuso/dev-jobs/master/public/cover_dark.webp');
   }
   body.light-theme {
@@ -82,6 +85,7 @@ body.dark-theme {
     --accent-7: #333;
     --accent-8: #111;
     --foreground: #000;
+    --navbar: var(--purple);
     --theme-img: url('https://raw.githubusercontent.com/josephgattuso/dev-jobs/master/public/cover_light.webp');
   }
 }
@@ -147,7 +151,7 @@ h1 {
 }
 
 i {
-  color: var(--magenta);
+  color: var(--gray);
   font-size: 2rem;
   width: 36px;
 }
@@ -202,7 +206,7 @@ i {
 /* Nav Menu Items */
 nav,
 nav ul {
-  height: 100vh;
+  height: calc(100vh - 70px);
   margin: 0;
   padding: 0;
 }
@@ -215,30 +219,30 @@ nav ul {
 }
 
 nav ul li {
-  height: 25%;
+  height: 20%;
   overflow: hidden;
 }
 
 nav li a {
-  position: relative;
-  top: 45%;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  text-decoration: none;
   display: block;
-  text-align: center;
   font-size: 1.5rem;
+  letter-spacing: 4px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  top: 45%;
 }
 
 nav li a::before {
-  content: '';
-  width: 25vw;
-  height: 3px;
   background: var(--magenta);
-  position: absolute;
-  top: 47.5%;
+  content: '';
+  height: 3px;
   left: 0;
   opacity: 0;
+  position: absolute;
+  top: 47.5%;
+  width: 25vw;
 }
 
 nav li a:hover::before {
@@ -246,23 +250,23 @@ nav li a:hover::before {
 }
 
 nav li:nth-of-type(1) {
-  background: var(--accent-1);
-}
-
-nav li:nth-of-type(2) {
   background: var(--accent-2);
 }
 
-nav li:nth-of-type(3) {
+nav li:nth-of-type(2) {
   background: var(--accent-3);
 }
 
-nav li:nth-of-type(4) {
+nav li:nth-of-type(3) {
   background: var(--accent-4);
 }
 
-nav li:nth-of-type(5) {
+nav li:nth-of-type(4) {
   background: var(--accent-5);
+}
+
+nav li:nth-of-type(5) {
+  background: var(--accent-6);
 }
 
 nav i {
@@ -272,19 +276,21 @@ nav i {
 }
 
 .navbar {
-  background: var(--clear);
+  background: var(--navbar);
   border: 1px solid var(--clear);
   height: 70px;
   top: 0;
   position: sticky;
+  width: 100%;
+  z-index: 1;
 }
 
 .overlay {
   background: rgba(0, 0, 0, 0.7);
-  height: 100vh;
+  height: calc(100vh - 70px);
   left: 0;
   position: fixed;
-  top: 0;
+  top: 70px;
   transform: translateX(-100vw);
   width: 100vw;
 }
@@ -375,7 +381,7 @@ nav i {
 }
 
 .theme-toggle .fas {
-  color: var(--foreground);
+  color: var(--white);
 }
 
 /* --- Menu Bars ------------------------------------ */
@@ -401,7 +407,7 @@ nav i {
 .bar3 {
   width: 35px;
   height: 3px;
-  background: var(--foreground);
+  background: var(--white);
   margin: 8px 0;
   transition: 0.4s;
 }
@@ -476,6 +482,7 @@ nav i {
   height: 0.3rem;
   width: 1rem;
 }
+
 .slider-container::-webkit-scrollbar-thumb {
   background: var(--magenta);
   cursor: pointer;
@@ -515,9 +522,9 @@ nav i {
   margin-left: -130px;
 }
 
-.slide img {
+.slide-img {
   object-fit: cover;
-  height: 280px;
+  height: 200px;
   width: 100%;
 }
 
@@ -675,6 +682,9 @@ footer {
   .banner {
     max-height: 280px;
     width: 100vw;
+  }
+  .card-img {
+    height: 280px;
   }
   .column.left,
   .column.right {

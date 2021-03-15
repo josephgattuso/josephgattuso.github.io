@@ -14,7 +14,7 @@ function addProjects() {
       <div class="slide">
         <h3>${project.name}</h3>
         <p>${project.desc}</p>
-        <img src="${project.img}" alt="${project.name}" />
+        <img class="slide-img" src="${project.img}" alt="${project.name}" />
         <div class="btn-container">
           <a
               class="card-link"
