@@ -6,7 +6,7 @@
   /* Colours */
   --white: #fff;
   --black: #000;
-  --gray: #9fa6b2;
+  --gray: #787e8a;
   --blue: #0070f3;
   --cyan: #00cdb3;
   /* Highlights */
@@ -156,6 +156,10 @@ i {
   width: 36px;
 }
 
+ul {
+  list-style: none;
+}
+
 .subtitle {
   color: var(--accent-6);
   font-family: var(--heading-font);
@@ -215,7 +219,6 @@ nav ul {
   display: flex;
   flex-direction: column;
   justify-content: stretch;
-  list-style: none;
 }
 
 nav ul li {
@@ -649,21 +652,26 @@ nav i {
 /* --- Footer ------------------------------ */
 
 footer {
+  background: var(--black);
+  border-top-right-radius: 6rem;
+  color: var(--white);
   padding: 2rem;
   text-align: center;
+  width: 100%;
+}
+
+footer ul li a {
+  color: var(--white);
 }
 
 .social {
-  list-style: none;
-  padding: 0;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
 .social li {
-  padding: 0 0.5rem;
+  margin-left: 0.5rem;
 }
 
 /* --- Media Queries ------------------------------ */
