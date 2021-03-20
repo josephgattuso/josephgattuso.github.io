@@ -16,8 +16,9 @@ const articles = [
       'https://javascript.plainenglish.io/javascript-algorithms-bubble-sort-d265d27ea42',
   },
   {
-    name: 'Lorem ipsum dolor sit amet consectetur',
-    img: 'https://placehold.co/600x425',
+    name: 'Learning Software Development',
+    img:
+      'https://images.unsplash.com/photo-1531792201207-fe4d75b7749d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1650&q=80',
     desc:
       'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsam pariatur quos...',
     link:
