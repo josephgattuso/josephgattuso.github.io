@@ -13,7 +13,14 @@ function addProjects() {
       return `
       <div class="slide">
         <h3>${project.name}</h3>
-        <img class="slide-img" src="${project.img}" alt="${project.name}" />
+        <a
+          class="card-link"
+          href="${project.demo}"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          >
+          <img class="slide-img" src="${project.img}" alt="${project.name}" />
+        </a>
         <p>${project.desc}</p>
         <div class="btn-container">
           <a
