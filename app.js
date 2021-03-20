@@ -62,9 +62,7 @@ function addArticles() {
       const { name, img, desc, link } = article;
       return `
       <div class="card">
-        <a href=${article.link} target="_blank" rel="noopener noreferrer nofollow">
-          <img class="card-img" src=${article.img} alt=${article.name} />
-        </a>
+        <img class="card-img" src=${article.img} alt=${article.name} />
         <div class="card-content">
           <h3 class="card-title">${article.name}</h3>
           <p class="card-description">${article.desc}</p>
