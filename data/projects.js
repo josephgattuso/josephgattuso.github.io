@@ -1,6 +1,15 @@
 // Projects Data
 const projects = [
   {
+    name: 'Dev Profiles',
+    img:
+      'https://raw.githubusercontent.com/josephgattuso/dev-profiles/main/static/og.webp',
+    desc:
+      'Search for any GitHub profile and return key information using the GitHub API. Built with Next.js and Styled Components',
+    demo: 'https://profiles.gattuso.dev',
+    repo: 'https://github.com/josephgattuso/dev-profiles',
+  },
+  {
     name: 'Calculator',
     img:
       'https://github.com/josephgattuso/js-projects-v2/raw/master/calculator/cover.webp',
@@ -71,16 +80,6 @@ const projects = [
       'Search for movies and view movie info and ratings. Uses the moviedb API',
     demo: 'https://gattuso.dev/js-projects/movie-app',
     repo: 'https://github.com/josephgattuso/js-projects/tree/master/movie-app',
-  },
-  {
-    name: 'GitHub Profiles',
-    img:
-      'https://github.com/josephgattuso/js-projects/raw/master/github-profiles/cover.webp',
-    desc:
-      'Search for any GitHub profile and returns key information.  Uses the GitHub API.',
-    demo: 'https://gattuso.dev/js-projects/github-profiles',
-    repo:
-      'https://github.com/josephgattuso/js-projects/tree/master/github-profiles',
   },
   {
     name: 'Random Choice Picker',
