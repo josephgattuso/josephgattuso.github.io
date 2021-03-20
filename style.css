@@ -583,7 +583,7 @@ nav i {
 }
 
 .card-features {
-  margin-bottom: 1rem;
+  list-style: circle;
   padding: 0 2rem;
 }
 

@@ -13,8 +13,8 @@ function addProjects() {
       return `
       <div class="slide">
         <h3>${project.name}</h3>
-        <p>${project.desc}</p>
         <img class="slide-img" src="${project.img}" alt="${project.name}" />
+        <p>${project.desc}</p>
         <div class="btn-container">
           <a
               class="card-link"
