@@ -1,11 +1,11 @@
 // Projects Data
 const projects = [
   {
-    name: 'Dev Profiles',
+    name: 'DevProfiles',
     img:
       'https://raw.githubusercontent.com/josephgattuso/dev-profiles/main/static/og.webp',
     desc:
-      'Search for any GitHub profile and return key information using the GitHub API. Built with Next.js and Styled Components',
+      'Search for any dev profile and return key information. Built with: <ul class="card-features"><li>GitHub API</li><li>Next.js</li><li>Styled Components</li></ul>',
     demo: 'https://profiles.gattuso.dev',
     repo: 'https://github.com/josephgattuso/dev-profiles',
   },
