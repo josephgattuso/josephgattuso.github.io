@@ -10,7 +10,7 @@
   --blue: #0070f3;
   --cyan: #00cdb3;
   /* Highlights */
-  --purple: #5964e0;
+  --purple: #2b6e9b;
   --magenta: #eb367f;
   --pink: #ff0080;
   --yellow: #fff500;
@@ -31,7 +31,7 @@ body {
   --background: #fff;
   --accent-1: #fafafa;
   --accent-2: #eaeaea;
-  --accent-3: #9fa6b2;
+  --accent-3: #999;
   --accent-4: #888;
   --accent-5: #666;
   --accent-6: #444;
@@ -119,7 +119,7 @@ body {
 
 section {
   margin: 0 auto;
-  min-height: 80vh;
+  min-height: 50vh;
   width: 100vw;
   max-width: 1170px;
 }
@@ -154,6 +154,11 @@ i {
   color: var(--gray);
   font-size: 2rem;
   width: 36px;
+}
+
+image {
+  max-width: 100%;
+  height: auto;
 }
 
 ul {
@@ -279,7 +284,7 @@ nav i {
 }
 
 .navbar {
-  background: var(--navbar);
+  background: var(--purple);
   border: 1px solid var(--clear);
   height: 70px;
   top: 0;
@@ -454,6 +459,13 @@ nav i {
   background-size: cover;
   max-height: 400px;
   width: 100%;
+}
+
+.about-img {
+  display: flex;
+  margin-top: 1.5rem;
+  align-items: center;
+  justify-content: center;
 }
 
 /* --- Projects Section ------------------------------ */
@@ -686,6 +698,9 @@ footer ul li a {
   }
   footer {
     margin-bottom: 2rem;
+  }
+  .about-img img {
+    width: 90vw;
   }
   .btn.submit {
     width: 100%;
