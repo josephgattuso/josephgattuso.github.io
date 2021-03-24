@@ -1,5 +1,13 @@
 const articles = [
   {
+    name: 'JavaScript Algorithms: Convert RGB to Hex',
+    img: 'https://miro.medium.com/max/4800/1*PZwbLKpIBVCBqpqWNc6Pgw.jpeg',
+    desc:
+      'Learn how to create a function that converts RGB values to Hex codes...',
+    link:
+      'https://joeetuso.medium.com/javascript-algorithms-convert-rgb-to-hex-79772e554914',
+  },
+  {
     name: 'JavaScript Algorithms: Reverse a String',
     img: 'https://miro.medium.com/max/1425/1*zmppN9ixHsHzfVXPRcAz0w.jpeg',
     desc:
