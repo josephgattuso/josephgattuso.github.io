@@ -276,16 +276,13 @@
     </section>
     <!-- Footer Section -->
     <footer>
-      <ul>
-        <li>
-          <a href="/">
-            <img src="assets/logo.svg" alt="" />
-          </a>
-        </li>
-        <li>&copy; <span id="date"></span></li>
-        <li>
-          <!-- prettier-ignore -->
-          <a
+      <a href="/">
+        <img id="logo" src="assets/logo.svg" alt="" />
+      </a>
+      <p class="copy">
+        &copy; <span id="date"></span>
+        <!-- prettier-ignore -->
+        <a
           href="https://github.com/josephgattuso/josephgattuso.github.io"
           target="_blank"
           rel="noopener noreferrer nofollow"
@@ -294,8 +291,7 @@
           alt="View Source Code"
         >
           View Source</a>
-        </li>
-      </ul>
+      </p>
       <ul class="social">
         <li>
           <a
@@ -346,7 +342,7 @@
           </a>
         </li>
       </ul>
-      <ul class="site-nav">
+      <ul class="site-nav" id="nav">
         <li>
           <a href="#home">Home</a>
         </li>

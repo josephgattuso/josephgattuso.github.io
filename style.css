@@ -672,21 +672,42 @@ footer {
   border-top-right-radius: 6rem;
   color: var(--white);
   padding: 2rem;
-  text-align: center;
   width: 100%;
+  display: grid;
+  grid-template-areas:
+    'logo nav'
+    'copy nav'
+    'social nav'
+    'social nav';
 }
 
-footer ul li a {
+footer a {
   color: var(--white);
+}
+
+footer img {
+  grid-area: logo;
+}
+
+footer p {
+  grid-area: copy;
+}
+
+footer .social {
+  grid-area: social;
+}
+
+footer .site-nav {
+  grid-area: nav;
 }
 
 .social {
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
-.social li {
+.social li:not(:first-of-type) {
   margin-left: 0.5rem;
 }
 
@@ -697,7 +718,7 @@ footer ul li a {
     width: 100%;
   }
   footer {
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
   }
   .about-img img {
     width: 90vw;
