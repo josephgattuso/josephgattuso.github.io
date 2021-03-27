@@ -6,11 +6,11 @@
   /* Colours */
   --white: #fff;
   --black: #000;
-  --gray: #787e8a;
+  --gray: #718096;
   --blue: #0070f3;
   --cyan: #00cdb3;
   /* Highlights */
-  --purple: #2b6e9b;
+  --purple: #2d3748;
   --magenta: #eb367f;
   --pink: #ff0080;
   --yellow: #fff500;
@@ -28,7 +28,7 @@
 
 /* Light Theme */
 body {
-  --background: #fff;
+  --background: #f8f8f8;
   --accent-1: #fafafa;
   --accent-2: #eaeaea;
   --accent-3: #999;
@@ -38,13 +38,15 @@ body {
   --accent-7: #333;
   --accent-8: #111;
   --foreground: #000;
-  --navbar: var(--purple);
+  --paper: var(--white);
+  --paper-alt: #e2e8f0;
+  --logo-img: url('https://raw.githubusercontent.com/josephgattuso/josephgattuso.github.io/master/assets/logo_light.svg');
   --theme-img: url('https://raw.githubusercontent.com/josephgattuso/dev-jobs/master/public/cover_light.webp');
 }
 
 /* Dark Theme */
 body.dark-theme {
-  --background: #121721;
+  --background: #1a202c;
   --accent-1: #18202d;
   --accent-2: #333;
   --accent-3: #444;
@@ -54,14 +56,16 @@ body.dark-theme {
   --accent-7: #eaeaea;
   --accent-8: #fafafa;
   --foreground: #fff;
-  --navbar: #121212;
+  --paper: var(--purple);
+  --paper-alt: var(--gray);
+  --logo-img: url('https://raw.githubusercontent.com/josephgattuso/josephgattuso.github.io/master/assets/logo_dark.svg');
   --theme-img: url('https://raw.githubusercontent.com/josephgattuso/dev-jobs/master/public/cover_dark.webp');
 }
 
 @media (prefers-color-scheme: dark) {
   /* defaults to dark theme */
   body {
-    --background: #121721;
+    --background: #1a202c;
     --accent-1: #18202d;
     --accent-2: #333;
     --accent-3: #444;
@@ -71,11 +75,13 @@ body.dark-theme {
     --accent-7: #eaeaea;
     --accent-8: #fafafa;
     --foreground: #fff;
-    --navbar: #121212;
+    --paper: var(--purple);
+    --paper-alt: var(--gray);
+    --logo-img: url('https://raw.githubusercontent.com/josephgattuso/josephgattuso.github.io/master/assets/logo_dark.svg');
     --theme-img: url('https://raw.githubusercontent.com/josephgattuso/dev-jobs/master/public/cover_dark.webp');
   }
   body.light-theme {
-    --background: #fff;
+    --background: #f8f8f8;
     --accent-1: #fafafa;
     --accent-2: #eaeaea;
     --accent-3: #999;
@@ -85,7 +91,9 @@ body.dark-theme {
     --accent-7: #333;
     --accent-8: #111;
     --foreground: #000;
-    --navbar: var(--purple);
+    --paper: var(--white);
+    --paper-alt: #e2e8f0;
+    --logo-img: url('https://raw.githubusercontent.com/josephgattuso/josephgattuso.github.io/master/assets/logo_light.svg');
     --theme-img: url('https://raw.githubusercontent.com/josephgattuso/dev-jobs/master/public/cover_light.webp');
   }
 }
@@ -284,7 +292,8 @@ nav i {
 }
 
 .navbar {
-  background: var(--purple);
+  background: var(--paper);
+  color: var(--foreground);
   border: 1px solid var(--clear);
   height: 70px;
   top: 0;
@@ -389,7 +398,7 @@ nav i {
 }
 
 .theme-toggle .fas {
-  color: var(--white);
+  color: var(--foreground);
 }
 
 /* --- Menu Bars ------------------------------------ */
@@ -415,7 +424,7 @@ nav i {
 .bar3 {
   width: 35px;
   height: 3px;
-  background: var(--white);
+  background: var(--foreground);
   margin: 8px 0;
   transition: 0.4s;
 }
@@ -471,6 +480,7 @@ nav i {
 /* --- Projects Section ------------------------------ */
 
 .feature-project .card {
+  background: var(--paper);
   border-radius: 10px;
   margin: 0 auto;
   width: 85vw;
@@ -512,7 +522,7 @@ nav i {
 }
 
 .slide {
-  background: var(--accent-1);
+  background: var(--paper);
   border-radius: 10px;
   box-shadow: var(--box-shadow);
   clear: both;
@@ -572,7 +582,8 @@ nav i {
 }
 
 .card {
-  background: var(--accent-1);
+  background: var(--paper);
+  border-radius: 10px;
   box-shadow: var(--box-shadow);
   flex: 1 1 200px;
 }
@@ -583,6 +594,8 @@ nav i {
 }
 
 .card-img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   object-fit: cover;
   height: 200px;
   width: 100%;
@@ -623,7 +636,8 @@ nav i {
 /* --- Contact Form ------------------------------ */
 
 .contact-form {
-  background: var(--accent-2);
+  background: var(--paper-alt);
+  border-radius: 10px;
   box-shadow: var(--box-shadow);
   margin: 20px 0 100px 0;
   padding: 20px;
@@ -668,9 +682,9 @@ nav i {
 /* --- Footer ------------------------------ */
 
 footer {
-  background: var(--black);
+  background: var(--paper);
   border-top-right-radius: 6rem;
-  color: var(--white);
+  color: var(--foreground);
   padding: 2rem;
   width: 100%;
   display: grid;
@@ -682,7 +696,7 @@ footer {
 }
 
 footer a {
-  color: var(--white);
+  color: var(--foreground);
 }
 
 footer img {
@@ -699,6 +713,12 @@ footer .social {
 
 footer .site-nav {
   grid-area: nav;
+}
+
+.logo-img {
+  background-image: var(--logo-img);
+  background-repeat: no-repeat;
+  height: 1.5rem;
 }
 
 .social {
